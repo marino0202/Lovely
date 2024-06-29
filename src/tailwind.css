@@ -978,10 +978,6 @@ a {
   height: 50%;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
 .h-2 {
   height: 0.5rem;
 }
@@ -1028,6 +1024,10 @@ a {
 
 .max-h-\[170px\] {
   max-height: 170px;
+}
+
+.max-h-\[calc\(100vh-28px\)\] {
+  max-height: calc(100vh - 28px);
 }
 
 .min-h-40 {
@@ -1112,10 +1112,6 @@ a {
 
 .min-w-56 {
   min-width: 14rem;
-}
-
-.min-w-72 {
-  min-width: 18rem;
 }
 
 .min-w-\[calc\(100vw-10px\)\] {
@@ -1372,11 +1368,6 @@ a {
 .border-neutral-300 {
   --tw-border-opacity: 1;
   border-color: rgb(212 212 212 / var(--tw-border-opacity));
-}
-
-.border-zinc-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(212 212 216 / var(--tw-border-opacity));
 }
 
 .border-y-white {
@@ -2240,6 +2231,10 @@ a {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus-visible\:ring-transparent:focus-visible {
+  --tw-ring-color: transparent;
 }
 
 .focus-visible\:ring-offset-2:focus-visible {
