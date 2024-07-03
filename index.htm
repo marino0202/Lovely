@@ -4,7 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lovers Stores: Carts &ndash;
+    loversstores.netlify.app</title>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Lovers is your trusted adult health and wellness shop. Find the right products for you or your partner.">
+    <link rel="canonical" href="https://loversstores.netlify.app/">
+    <link rel="shortcut icon" href="./src/assets/image/qhLZdDBj.png" type="image/png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lovers Stores: Buy Sex Toys, Lingerie, Adult Wellness Products">
+    <meta property="og:description" content="Lovers is your trusted adult health and wellness shop. Find the right products for you or your partner.">
+    <meta property="og:url" content="https://loversstores.netlify.app/">
+    <meta property="og:site_name" content="loversstores.netlify.app">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Lovers Stores: Buy Sex Toys, Lingerie, Adult Wellness Products">
+    <meta name="twitter:description" content="Lovers is your trusted adult health and wellness shop. Find the right products for you or your partner.">
+    <meta property="og:image" content="./src/assets/image/Mark-Shopify.webp" />
+    <meta property="og:image:secure_url" content="./src/assets/image/Mark-Shopify.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
     <script src="./src/custom.js" defer></script>
     <script src="./src/alpine.js" defer></script>
     <link rel="stylesheet" href="./src/tailwind.css">
@@ -58,7 +79,7 @@
                         </li>
                     </ul>
                     <a href="" class="mx-auto lg:mx-0 w-[140px] lg:py-4">
-                        <img src="./src/assets/image/loversfinal_450x.avif" alt="loversstores.com"
+                        <img src="./src/assets/image/loversfinal_450x.avif" alt="loversstores.netlify.app"
                             class="block h-auto max-w-full mx-auto border-0">
                     </a>
                     <nav class="capitalize lg-max:hidden lg:flex lg:items-stretch lg:self-stretch lg:flex-grow lg:justify-center lg:mx-8"
@@ -235,16 +256,16 @@
         </div>
         <div x-data="modal">
             <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="modalIsOpen"
-                class="fixed inset-0 z-30 flex items-end justify-center bg-black/30 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8"
+                class="fixed inset-0 z-30 flex items-end justify-center p-4 pb-8 bg-black/30 backdrop-blur-md sm:items-center lg:p-8"
                 role="dialog" aria-modal="true" aria-labelledby="defaultModalTitle">
                 <!-- Modal Dialog -->
                 <div x-show="modalIsOpen"
                     x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity"
                     x-transition:enter-start="scale-0" x-transition:enter-end="scale-100"
-                    class="flex max-w-lg flex-col gap-4 overflow-hidden rounded-md bg-zinc-50 text-neutral-600">
+                    class="flex flex-col max-w-lg gap-4 overflow-hidden rounded-md bg-zinc-50 text-neutral-600">
                     <!-- Dialog Header -->
                     <div
-                        class="flex items-center justify-between bg-zinc-100/60 p-4">
+                        class="flex items-center justify-between p-4 bg-zinc-100/60">
                         <h3 id="defaultModalTitle" class="font-semibold tracking-wide text-neutral-900">
                             Passcode</h3>
                     </div>
@@ -254,8 +275,8 @@
                     </div>
                     <!-- Dialog Footer -->
                     <div
-                        class="flex flex-col justify-between gap-2 p-4  sm:flex-row sm:items-center md:justify-end">
-                        <input type="text" class="w-full rounded-md border border-neutral-300 bg-neutral-50 px-2 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:opacity-75" placeholder="Enter your Giftcode" x-model="pass" x-on:keydown.enter="submit">
+                        class="flex flex-col justify-between gap-2 p-4 sm:flex-row sm:items-center md:justify-end">
+                        <input type="text" class="w-full px-2 py-2 text-sm border rounded-md border-neutral-300 bg-neutral-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:opacity-75" placeholder="Enter your Giftcode" x-model="pass" x-on:keydown.enter="submit">
                         <small class="pl-0.5 text-red-500 hidden" x-ref="error">Error: Invalid Passcode</small>
                         <button type="button" class="cursor-pointer whitespace-nowrap rounded-md bg-gradient-to-r from-[#F23B21] to-[#EB4F87] px-4 py-2 text-center text-sm font-medium tracking-wide text-white transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 active:opacity-100 active:outline-offset-0" x-on:click="submit">Verify</button>
                     </div>
@@ -270,7 +291,7 @@
                             <div id="shopify-section-cart-template">
                                 <form action="/" method="POST">
                                     <div class="cart-item-list">
-                                        <div class="mb-6 text-left md-max:fixed md-max:top-0 md-max:left-0 md-max:bg-white md-max:w-full z-10 md-max:px-4">
+                                        <div class="z-10 mb-6 text-left md-max:fixed md-max:top-0 md-max:left-0 md-max:bg-white md-max:w-full md-max:px-4">
                                             <a class="flex items-center font-medium text-black md-max:relative md-max:justify-center md-max:h-[65px]" href="/">
 
                                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -308,7 +329,7 @@
                                                     class="flex border border-[#efefef] min-h-40 mb-6 py-3 bg-white text-black leading-[1.2] tablet:flex-col tablet:p-0 md-max:block md-max:relative md-max:overflow-hidden md-max:mb-4 md-max:pr-3 md-max:pl-[calc(1.5rem+90px)] md-max:pb-[calc(1.5rem+67px)] xs-max:mx-auto">
                                                     <div class="relative text-left tablet:p-3 basis-44 md-max:absolute md-max:w-[90px] md-max:h-[90px] md-max:p-0 md-max:left-3">
                                                         <a href="/products/lovers-water-based-lube-foil-10ml?variant=34600241692807"
-                                                            class="flex w-auto md-max:w-full h-auto m-0 text-center">
+                                                            class="flex w-auto h-auto m-0 text-center md-max:w-full">
                                                             <img class="w-auto h-auto max-w-[120px] max-h-[170px] md-max:max-w-[90px] md-max:max-h-[90px] mx-auto"
                                                                 :src="img[index]" :alt="item">
                                                         </a>
@@ -431,7 +452,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex flex-col w-full float-left px-3 tracking-wide ml-auto md:w-5/12 flex-nowrap min-h-px"
+                        <div class="flex flex-col float-left w-full px-3 ml-auto tracking-wide md:w-5/12 flex-nowrap min-h-px"
                             x-ref="row">
                             <div class="tablet:w-[270px] summary-desc gray md-max:hidden">
                                 <div class="bg-[#f6f6f6] pt-6 pb-4 px-4">
@@ -469,7 +490,7 @@
                             </div>
                             <div class="tablet:w-[270px] border-t border-t-white md-max:w-full md-max:basis-full md-max:pb-4">
                                 <div class="px-4 bg-[#f6f6f6] md-max:bg-transparent md-max:p-0">
-                                    <div class="m-0 pb-4 sm:py-4" js-cartrewards="total" data-total="6400">
+                                    <div class="pb-4 m-0 sm:py-4" js-cartrewards="total" data-total="6400">
                                         <h4
                                             class="flex items-center mb-2 text-base font-medium tracking-wide uppercase">
                                             <svg class="inline-block w-4 h-4 mr-2 overflow-hidden fill-current">
@@ -501,7 +522,7 @@
                                             <div class="hidden bg-[#eee] h-full justify-center left-0 top-0 absolute items-center w-full"
                                                 js-cartrewards="loader">
                                                 <img
-                                                    src="//loversstores.com/cdn/shop/t/237/assets/swell-loader.svg?v=15457691556039571281706828004">
+                                                    src="//loversstores.netlify.app/cdn/shop/t/237/assets/swell-loader.svg?v=15457691556039571281706828004">
                                             </div>
                                         </div>
                                     </div>
@@ -533,45 +554,43 @@
                                         <span>$64.95</span>
                                     </li>
                                 </ul>
-                                <form action="/" method="POST">
-                                    <div id="genie-store-pickup-front-holder"
-                                        data-store-domain="loversonline.myshopify.com" class="w-full mx-auto mb-2.5">
-                                        <input type="hidden" name="attributes[Checkout-Method]" value=""><input
-                                            type="hidden" name="attributes[Pickup-Information]" value=""><input
-                                            type="hidden" name="attributes[Pickup-Date]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Time]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Collector-First-Name]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Collector-Last-Name]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Collector-Phone]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Extra-1]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Extra-2]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Extra-3]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Collector-Email]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Location-Company]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Location-Address]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Location-Address-2]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Location-City]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Location-Region]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Location-Zip]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Location-Country]" value=""><input type="hidden"
-                                            name="attributes[Pickup-Location-Phone-Number]" value=""><input
-                                            type="hidden" name="attributes[Pickup-Location-Email]" value="">
-                                        <div id="geniePickupBox" class="hidden"><button
-                                                class="button button-dark">PICKUP IN STORE</button>
-                                        </div>
+                                <div id="genie-store-pickup-front-holder"
+                                    data-store-domain="loversonline.myshopify.com" class="w-full mx-auto mb-2.5">
+                                    <input type="hidden" name="attributes[Checkout-Method]" value=""><input
+                                        type="hidden" name="attributes[Pickup-Information]" value=""><input
+                                        type="hidden" name="attributes[Pickup-Date]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Time]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Collector-First-Name]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Collector-Last-Name]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Collector-Phone]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Extra-1]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Extra-2]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Extra-3]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Collector-Email]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Location-Company]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Location-Address]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Location-Address-2]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Location-City]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Location-Region]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Location-Zip]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Location-Country]" value=""><input type="hidden"
+                                        name="attributes[Pickup-Location-Phone-Number]" value=""><input
+                                        type="hidden" name="attributes[Pickup-Location-Email]" value="">
+                                    <div id="geniePickupBox" class="hidden"><button
+                                            class="button button-dark">PICKUP IN STORE</button>
                                     </div>
-                                    <img src="" onerror="loadStorePickup()">
-                                    <button type="submit" name="checkout"
-                                        class="flex items-center justify-center w-full my-4 text-sm uppercase py-[15px] font-medium min-w-56 px-[34px] text-white bg-[#005656] relative leading-[normal] border-0 rounded-none text-center transition-colors tracking-[0.75px] cursor-pointer overflow-visible">
-                                        <svg width="20" height="20" class="text-center text-white" viewBox="0 0 20 20"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M14.9997 6.66683H14.1663V5.00016C14.1663 2.70016 12.2997 0.833496 9.99967 0.833496C7.69967 0.833496 5.83301 2.70016 5.83301 5.00016V6.66683H4.99967C4.08301 6.66683 3.33301 7.41683 3.33301 8.3335V16.6668C3.33301 17.5835 4.08301 18.3335 4.99967 18.3335H14.9997C15.9163 18.3335 16.6663 17.5835 16.6663 16.6668V8.3335C16.6663 7.41683 15.9163 6.66683 14.9997 6.66683ZM7.49967 5.00016C7.49967 3.61683 8.61634 2.50016 9.99967 2.50016C11.383 2.50016 12.4997 3.61683 12.4997 5.00016V6.66683H7.49967V5.00016ZM14.9997 16.6668H4.99967V8.3335H14.9997V16.6668ZM9.99967 14.1668C10.9163 14.1668 11.6663 13.4168 11.6663 12.5002C11.6663 11.5835 10.9163 10.8335 9.99967 10.8335C9.08301 10.8335 8.33301 11.5835 8.33301 12.5002C8.33301 13.4168 9.08301 14.1668 9.99967 14.1668Z"
-                                                fill="white"></path>
-                                        </svg>
-                                        <span>Checkout securely</span>
-                                    </button>
-                                </form>
+                                </div>
+                                <img src="" onerror="loadStorePickup()">
+                                <button type="button" name="checkout" @click="$dispatch('second')"
+                                    class="flex items-center justify-center w-full my-4 text-sm uppercase py-[15px] font-medium min-w-56 px-[34px] text-white bg-[#005656] relative leading-[normal] border-0 rounded-none text-center transition-colors tracking-[0.75px] cursor-pointer overflow-visible">
+                                    <svg width="20" height="20" class="text-center text-white" viewBox="0 0 20 20"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.9997 6.66683H14.1663V5.00016C14.1663 2.70016 12.2997 0.833496 9.99967 0.833496C7.69967 0.833496 5.83301 2.70016 5.83301 5.00016V6.66683H4.99967C4.08301 6.66683 3.33301 7.41683 3.33301 8.3335V16.6668C3.33301 17.5835 4.08301 18.3335 4.99967 18.3335H14.9997C15.9163 18.3335 16.6663 17.5835 16.6663 16.6668V8.3335C16.6663 7.41683 15.9163 6.66683 14.9997 6.66683ZM7.49967 5.00016C7.49967 3.61683 8.61634 2.50016 9.99967 2.50016C11.383 2.50016 12.4997 3.61683 12.4997 5.00016V6.66683H7.49967V5.00016ZM14.9997 16.6668H4.99967V8.3335H14.9997V16.6668ZM9.99967 14.1668C10.9163 14.1668 11.6663 13.4168 11.6663 12.5002C11.6663 11.5835 10.9163 10.8335 9.99967 10.8335C9.08301 10.8335 8.33301 11.5835 8.33301 12.5002C8.33301 13.4168 9.08301 14.1668 9.99967 14.1668Z"
+                                            fill="white"></path>
+                                    </svg>
+                                    <span>Checkout securely</span>
+                                </button>
                             </div>
                             <div class="tablet:w-[270px] help-wrapper md-max:hidden">
                                 <div class="p-4 ">
@@ -837,411 +856,87 @@
                                         <div aria-live="polite"
                                             class="!pt-2 relative overflow-hiddden w-full block m-0">
                                             <div class="!flex relative top-0 left-0" x-bind:style="'transform: translate3d(' + (-1 * w_elem() * num) + 'px, 0px, 0px); opacity: 1; width: ' + (w_elem() *5) + 'px;'">
-                                                <div class="md:pb-3 md:px-3 pb-1.5 px-1.5 !block float-left min-h-px overflow-hidden slick-current slick-active"
-                                                    data-product-name="Aphrodisiac Sex Chocolates"
-                                                    data-product-id="5 180373401735" :style="'width: '+ w_elem() +'px;'"
-                                                    data-slick-index="0" aria-hidden="false">
-                                                    <div class="flex flex-col h-full relative">
-
-                                                        <div class="mt-[7px] mb-3 bg-white">
-                                                            <a href="/products/sex-chocolates"
-                                                                class="block relative w-full overflow-hidden pt-[100%]"><img
-                                                                    class="w-auto h-full left-1/2 block absolute top-1/2 -translate-x-1/2 -translate-y-1/2 lazyautosizes lazyloaded"
-                                                                    js-swatch-image="sex-chocolates" data-sizes="auto"
-                                                                    data-widths="[600]" alt="Aphrodisiac Sex Chocolates"
-                                                                    data-srcset="//loversstores.com/cdn/shop/products/1PKSEXCHOCOLATE_600x.jpg?v=1627742529 600w"
-                                                                    sizes="121px"
-                                                                    srcset="//loversstores.com/cdn/shop/products/1PKSEXCHOCOLATE_600x.jpg?v=1627742529 600w">
-                                                            </a>
-                                                        </div>
-                                                        <div class="boost-pfs-filter-product-item-label hidden">
-                                                            <span class="boost-pfs-filter-label">New flavors
-                                                                available!</span>
-                                                        </div>
-
-                                                        <div class="flex flex-col">
-                                                            <div class="boost-pfs-filter-product-info">
-
-
-                                                                <a class="block"
-                                                                    href="/collections/all?pf_pt_product_type=Sensitizer">
-                                                                    Sensitizer
+                                                <template x-for="(item, index) in name" :key="index">
+                                                    <div class="md:pb-3 md:px-3 pb-1.5 px-1.5 !block float-left min-h-px overflow-hidden slick-current slick-active"
+                                                        :data-product-name="item"
+                                                        data-product-id="5 180373401735" :style="'width: '+ w_elem() +'px;'"
+                                                        data-slick-index="0" aria-hidden="false">
+                                                        <div class="relative flex flex-col h-full">
+    
+                                                            <div class="mt-[7px] mb-3 bg-white">
+                                                                <a href="/products/sex-chocolates"
+                                                                    class="block relative w-full overflow-hidden pt-[100%]"><img
+                                                                        class="absolute block w-auto h-full -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 lazyautosizes lazyloaded"
+                                                                        js-swatch-image="sex-chocolates" data-sizes="auto"
+                                                                        data-widths="[600]" alt="Aphrodisiac Sex Chocolates"
+                                                                        :data-srcset="img[index]"
+                                                                        sizes="121px"
+                                                                        :srcset="img[index]">
                                                                 </a>
-                                                                <a class="block font-medium mb-1 text-black"
-                                                                    href="/products/sex-chocolates">
-                                                                    Aphrodisiac Sex Chocolates
-                                                                </a>
-
-                                                                <p class="boost-pfs-filter-product-item-price body-2  font-medium flex mb-1">
-
-                                                                    <span
-                                                                        class="boost-pfs-filter-product-item-regular-price">
-                                                                        <span class="money">$1.25</span>
-                                                                    </span>
-                                                                    <span
-                                                                        class="!text-[#2d2926] bg-[#f6f6f6] absolute m-1 p-[9px] top-0 right-0 leading-[0] rounded-sm cursor-pointer inline-block !opacity-100 "
-                                                                        data-product="5180373401735"
-                                                                        data-variant="40809770418311"
-                                                                        title="Add to <a href='/a/wishlist'>Wishlist</a>"
-                                                                        aria-label="Add to Wishlist" role="button"
-                                                                        tabindex="0">
-                                                                        <svg
-                                                                            xmlns="http://www.w3.org/2000/svg"
-                                                                            width="24" height="24" viewBox="0 0 24 24"
-                                                                            fill="none" stroke="currentColor"
-                                                                            stroke-width="2" stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            class="feather feather-heart">
-                                                                            <path
-                                                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                                                            </path>
-                                                                        </svg>
-                                                                    </span>
-
-                                                                </p>
+                                                            </div>
+                                                            <div class="hidden boost-pfs-filter-product-item-label">
+                                                                <span class="boost-pfs-filter-label">New flavors
+                                                                    available!</span>
+                                                            </div>
+    
+                                                            <div class="flex flex-col">
+                                                                <div class="boost-pfs-filter-product-info">
+    
+    
+                                                                    <a class="block"
+                                                                        href="/collections/all?pf_pt_product_type=Sensitizer" x-text="brand[index]">
+                                                                        Sensitizer
+                                                                    </a>
+                                                                    <a class="block mb-1 font-medium text-black"
+                                                                        href="/products/sex-chocolates" x-text="item">
+                                                                        Aphrodisiac Sex Chocolates
+                                                                    </a>
+    
+                                                                    <p class="flex mb-1 font-medium boost-pfs-filter-product-item-price body-2">
+    
+                                                                        <span
+                                                                            class="boost-pfs-filter-product-item-regular-price">
+                                                                            <span class="money" x-text="'$'+price[index]">$1.25</span>
+                                                                        </span>
+                                                                        <span
+                                                                            class="!text-[#2d2926] bg-[#f6f6f6] absolute m-1 p-[9px] top-0 right-0 leading-[0] rounded-sm cursor-pointer inline-block !opacity-100 "
+                                                                            data-product="5180373401735"
+                                                                            data-variant="40809770418311"
+                                                                            title="Add to <a href='/a/wishlist'>Wishlist</a>"
+                                                                            aria-label="Add to Wishlist" role="button"
+                                                                            tabindex="0">
+                                                                            <svg
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                width="24" height="24" viewBox="0 0 24 24"
+                                                                                fill="none" stroke="currentColor"
+                                                                                stroke-width="2" stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                class="feather feather-heart">
+                                                                                <path
+                                                                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                                                                </path>
+                                                                            </svg>
+                                                                        </span>
+    
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="block !relative mt-auto top-auto !opacity-100 transform-none">
+                                                                <form action="/cart/add" data-productid="40809770418311" "="">
+                                                                    <input class="hidden" type=" hidden" name="id" data-productid="40809770418311" value="40809770418311"
+                                                                    data-variant-title="Amaretto">
+                                                                    <button type="submit"
+                                                                        class="relative inline-block border-none rounded-none leading-normal uppercase text-base text-center tracking-[0.75px] transition-colors text-white bg-[#005656] w-full px-[5px] py-4 font-medium">
+    
+                                                                        Add to cart
+    
+                                                                    </button>
+                                                                </form>
                                                             </div>
                                                         </div>
-                                                        <div
-                                                            class="block !relative mt-auto top-auto !opacity-100 transform-none">
-                                                            <form action="/cart/add" data-productid="40809770418311" "="">
-                                                                <input class="hidden" type=" hidden" name="id" data-productid="40809770418311" value="40809770418311"
-                                                                data-variant-title="Amaretto">
-                                                                <button type="submit"
-                                                                    class="relative inline-block border-none rounded-none leading-normal uppercase text-base text-center tracking-[0.75px] transition-colors text-white bg-[#005656] w-full px-[5px] py-4 font-medium">
-
-                                                                    Add to cart
-
-                                                                </button>
-                                                            </form>
-                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="md:pb-3 md:px-3 pb-1.5 px-1.5 !block float-left min-h-px overflow-hidden slick-active"
-                                                    data-product-name="GoodHead Deep Throat Spray To-Go" data-
-                                                    product-id="7389022388359" :style="'width: '+ w_elem() +'px;'"
-                                                    data-slick-index="1" aria-hidden="false">
-                                                    <div class="flex flex-col h-full relative">
-
-                                                        <div class="mt-[7px] mb-3 bg-white">
-                                                            <a href="/products/goodhead-deep-throat-spray-to-go"
-                                                                class="block relative w-full overflow-hidden pt-[100%]"><img
-                                                                    class="w-auto h-full left-1/2 block absolute top-1/2 -translate-x-1/2 -translate-y-1/2 lazyautosizes lazyloaded"
-                                                                    js-swatch-image="goodhead-deep-throat-spray-to-go"
-                                                                    data-sizes="auto" data-widths="[600]"
-                                                                    alt="Doc_Johnson_GoodHead_Deep_Throat_Spray_To_Go_Mint"
-                                                                    data-srcset="//loversstores.com/cdn/shop/files/Doc_Johnson_GoodHead_Deep_Throat_Spray_To_Go_Mint_600x.jpg?v=1682640043 600w"
-                                                                    sizes="241px"
-                                                                    srcset="//loversstores.com/cdn/shop/files/Doc_Johnson_GoodHead_Deep_Throat_Spray_To_Go_Mint_600x.jpg?v=1682640043 600w">
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="boost-pfs-filter-product-item-label"></div>
-
-                                                        <div class="flex flex-col">
-                                                            <div class="boost-pfs-filter-product-info">
-
-
-                                                                <a class="block"
-                                                                    href="/collections/all?pf_pt_product_type=Desensitizer">
-                                                                    Desensitizer
-                                                                </a>
-
-
-                                                                <a class="block font-medium mb-1 text-black"
-                                                                    href="/products/goodhead-deep-throat-spray-to-go">
-                                                                    GoodHead Deep Throat Spray To-Go
-                                                                </a>
-
-                                                                <p class="boost-pfs-filter-product-item-price body-2  font-medium flex mb-1">
-
-                                                                    <span
-                                                                        class="boost-pfs-filter-product-item-regular-price">
-                                                                        <span class="money">$12.50</span>
-                                                                    </span>
-
-
-
-                                                                    <span
-                                                                        class="!text-[#2d2926] bg-[#f6f6f6] absolute m-1 p-[9px] top-0 right-0 leading-[0] rounded-sm cursor-pointer inline-block !opacity-100 "
-                                                                        data-product="7389022388359"
-                                                                        data-variant="40466535088263"
-                                                                        title="Add to <a href='/a/wishlist'>Wishlist</a>"
-                                                                        aria-label="Add to Wishlist" role="button"
-                                                                        tabindex="0"><svg
-                                                                            xmlns="http://www.w3.org/2000/svg"
-                                                                            width="24" height="24" viewBox="0 0 24 24"
-                                                                            fill="none" stroke="currentColor"
-                                                                            stroke-width="2" stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            class="feather feather-heart">
-                                                                            <path
-                                                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                                                            </path>
-                                                                        </svg></span>
-
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div
-                                                            class="block !relative mt-auto top-auto !opacity-100 transform-none">
-                                                            <form action="/cart/add" data-productid="40466535088263" "="">
-                                                                <input class="hidden" type=" hidden" name="id" data-productid="40466535088263" value="40466535088263"
-                                                                data-variant-title="Mint">
-                                                                <button type="submit"
-                                                                    class="relative inline-block border-none rounded-none leading-normal uppercase text-base text-center tracking-[0.75px] transition-colors text-white bg-[#005656] w-full px-[5px] py-4 font-medium">
-
-                                                                    Add to cart
-
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="md:pb-3 md:px-3 pb-1.5 px-1.5 !block float-left min-h-px overflow-hidden slick-active"
-                                                    data-product-name="Discover G-Spot Arousal Serum - Foil"
-                                                    data-product-id="5180373303431" :style="'width: '+ w_elem() +'px;'"
-                                                    data-slick-index="2" aria-hidden="false">
-                                                    <div class="flex flex-col h-full relative">
-
-                                                        <div class="mt-[7px] mb-3 bg-white">
-                                                            <a href="/products/discover-g-spot-arousal-serum-foil"
-                                                                class="block relative w-full overflow-hidden pt-[100%]"><img
-                                                                    class="w-auto h-full left-1/2 block absolute top-1/2 -translate-x-1/2 -translate-y-1/2 lazyautosizes ls-is-cached lazyloaded"
-                                                                    js-swatch-image="discover-g-spot-arousal-serum-foil"
-                                                                    data-sizes="auto" data-widths="[600]"
-                                                                    alt="Discover G-Spot Arousal Serum - Foil"
-                                                                    data-srcset="//loversstores.com/cdn/shop/products/discovergspotfoil_600x.jpg?v=1600344598 600w"
-                                                                    sizes="121px"
-                                                                    srcset="//loversstores.com/cdn/shop/products/discovergspotfoil_600x.jpg?v=1600344598 600w">
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="boost-pfs-filter-product-item-label"></div>
-
-                                                        <div class="flex flex-col">
-                                                            <div class="boost-pfs-filter-product-info">
-
-
-                                                                <a class="block"
-                                                                    href="/collections/all?pf_pt_product_type=Sensitizer">
-                                                                    Sensitizer
-                                                                </a>
-
-
-                                                                <a class="block font-medium mb-1 text-black"
-                                                                    href="/products/discover-g-spot-arousal-serum-foil">
-                                                                    Discover G-Spot Arousal Serum - Foil
-                                                                </a>
-
-                                                                <p class="boost-pfs-filter-product-item-price body-2  font-medium flex mb-1">
-
-                                                                    <span
-                                                                        class="boost-pfs-filter-product-item-regular-price">
-                                                                        <span class="money">$1.95</span>
-                                                                    </span>
-
-
-
-                                                                    <span
-                                                                        class="!text-[#2d2926] bg-[#f6f6f6] absolute m-1 p-[9px] top-0 right-0 leading-[0] rounded-sm cursor-pointer inline-block !opacity-100 "
-                                                                        data-product="5180373303431"
-                                                                        data-variant="34600125890695"
-                                                                        title="Add to <a href='/a/wishlist'>Wishlist</a>"
-                                                                        aria-label="Add to Wishlist" role="button"
-                                                                        tabindex="0"><svg
-                                                                            xmlns="http://www.w3.org/2000/svg"
-                                                                            width="24" height="24" viewBox="0 0 24 24"
-                                                                            fill="none" stroke="currentColor"
-                                                                            stroke-width="2" stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            class="feather feather-heart">
-                                                                            <path
-                                                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                                                            </path>
-                                                                        </svg></span>
-
-                                                                </p>
-                                                            </div>
-
-
-                                                        </div>
-
-
-                                                        <div
-                                                            class="block !relative mt-auto top-auto !opacity-100 transform-none">
-                                                            <form action="/cart/add" data-productid="34600125890695" "="">
-                                                                <input class="hidden" type=" hidden" name="id" data-productid="34600125890695" value="34600125890695"
-                                                                data-variant-title="Default Title">
-                                                                <button type="submit"
-                                                                    class="relative inline-block border-none rounded-none leading-normal uppercase text-base text-center tracking-[0.75px] transition-colors text-white bg-[#005656] w-full px-[5px] py-4 font-medium">
-
-                                                                    Add to cart
-
-                                                                </button>
-
-
-                                                            </form>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                                <div class="md:pb-3 md:px-3 pb-1.5 px-1.5 !block float-left min-h-px overflow-hidden"
-                                                    data-product-name="Assorted Tropical Poppin' Rock Oral Sex Candy"
-                                                    data-product-id="7393645625479" :style="'width: '+ w_elem() +'px;'"
-                                                    data-slick-index="3" aria-hidden="true">
-                                                    <div class="flex flex-col h-full relative">
-
-                                                        <div class="mt-[7px] mb-3 bg-white">
-                                                            <a href="/products/assorted-tropical-poppin-rock-oral-sex-candy"
-                                                                class="block relative w-full overflow-hidden pt-[100%]"><img
-                                                                    class="w-auto h-full left-1/2 block absolute top-1/2 -translate-x-1/2 -translate-y-1/2 lazyautosizes lazyloaded"
-                                                                    js-swatch-image="assorted-tropical-poppin-rock-oral-sex-candy"
-                                                                    data-sizes="auto" data-widths="[600]"
-                                                                    alt="Assorted_Tropical_Poppin_Rock_Oral_Sex_Candy"
-                                                                    data-srcset="//loversstores.com/cdn/shop/files/Assorted_Tropical_Poppin_Rock_Oral_Sex_Candy_600x.jpg?v=1686006936 600w"
-                                                                    sizes="241px"
-                                                                    srcset="//loversstores.com/cdn/shop/files/Assorted_Tropical_Poppin_Rock_Oral_Sex_Candy_600x.jpg?v=1686006936 600w">
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="boost-pfs-filter-product-item-label"></div>
-
-                                                        <div class="flex flex-col">
-                                                            <div class="boost-pfs-filter-product-info">
-
-
-                                                                <a class="block"
-                                                                    href="/collections/all?pf_pt_product_type=Edibles">
-                                                                    Edibles
-                                                                </a>
-
-
-                                                                <a class="block font-medium mb-1 text-black"
-                                                                    href="/products/assorted-tropical-poppin-rock-oral-sex-candy">
-                                                                    Assorted Tropical Poppin' Rock Oral Sex Candy
-                                                                </a>
-
-                                                                <p class="boost-pfs-filter-product-item-price body-2  font-medium flex mb-1">
-
-                                                                    <span
-                                                                        class="boost-pfs-filter-product-item-regular-price">
-                                                                        <span class="money">$1.50</span>
-                                                                    </span>
-
-
-
-                                                                    <span
-                                                                        class="!text-[#2d2926] bg-[#f6f6f6] absolute m-1 p-[9px] top-0 right-0 leading-[0] rounded-sm cursor-pointer inline-block !opacity-100 "
-                                                                        data-product="7393645625479"
-                                                                        data-variant="40468852310151"
-                                                                        title="Add to <a href='/a/wishlist'>Wishlist</a>"
-                                                                        aria-label="Add to Wishlist" role="button"
-                                                                        tabindex="0"><svg
-                                                                            xmlns="http://www.w3.org/2000/svg"
-                                                                            width="24" height="24" viewBox="0 0 24 24"
-                                                                            fill="none" stroke="currentColor"
-                                                                            stroke-width="2" stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            class="feather feather-heart">
-                                                                            <path
-                                                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                                                            </path>
-                                                                        </svg></span>
-
-                                                                </p>
-                                                            </div>
-
-
-                                                        </div>
-
-
-                                                        <div
-                                                            class="block !relative mt-auto top-auto !opacity-100 transform-none">
-                                                            <form action="/cart/add" data-productid="40468852310151" "="">
-                              <input class="hidden" type=" hidden" name="id" data-productid="40468852310151" value="40468852310151"
-                                                                data-variant-title="Default Title">
-                                                                <button type="submit"
-                                                                    class="relative inline-block border-none rounded-none leading-normal uppercase text-base text-center tracking-[0.75px] transition-colors text-white bg-[#005656] w-full px-[5px] py-4 font-medium">
-
-                                                                    Add to cart
-
-                                                                </button>
-
-
-                                                            </form>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                                <div class="md:pb-3 md:px-3 pb-1.5 px-1.5 !block float-left min-h-px overflow-hidden"
-                                                    data-product-name="Inya Rose Vibrating Air Pulsator" data-product-
-                                                    id="6593794375815" :style="'width: '+ w_elem() +'px;'" data-slick-index="4"
-                                                    aria-hidden="true">
-                                                    <div class="flex flex-col h-full relative">
-                                                        <div class="mt-[7px] mb-3 bg-white">
-                                                            <a href="/products/inya-rose-recharge-vibe"
-                                                                class="block relative w-full overflow-hidden pt-[100%]"><img
-                                                                    class="w-auto h-full left-1/2 block absolute top-1/2 -translate-x-1/2 -translate-y-1/2 lazyautosizes lazyloaded"
-                                                                    js-swatch-image="inya-rose-recharge-vibe"
-                                                                    data-sizes="auto" data-widths="[600]"
-                                                                    alt="Inya_Rose_Vibrating_Air_Pulsator"
-                                                                    data-srcset="//loversstores.com/cdn/shop/products/Inya_Rose_Vibrating_Air_Pulsator_600x.jpg?v=1675805559 600w"
-                                                                    sizes="232px"
-                                                                    srcset="//loversstores.com/cdn/shop/products/Inya_Rose_Vibrating_Air_Pulsator_600x.jpg?v=1675805559 600w">
-                                                            </a>
-                                                        </div>
-                                                        <div class="boost-pfs-filter-product-item-label">
-                                                        </div>
-                                                        <div class="flex flex-col">
-                                                            <div class="boost-pfs-filter-product-info">
-                                                                <a class="block"
-                                                                    href="/collections/all?pf_pt_product_type=Air+Pulsator">
-                                                                    Air Pulsator
-                                                                </a>
-                                                                <a class="block font-medium mb-1 text-black"
-                                                                    href="/products/inya-rose-recharge-vibe">
-                                                                    Inya Rose Vibrating Air Pulsator
-                                                                </a>
-                                                                <p class="boost-pfs-filter-product-item-price body-2  font-medium flex mb-1">
-                                                                    <span
-                                                                        class="boost-pfs-filter-product-item-regular-price">
-                                                                        <span class="money">$58.99</span>
-                                                                    </span>
-                                                                    <span
-                                                                        class="!text-[#2d2926] bg-[#f6f6f6] absolute m-1 p-[9px] top-0 right-0 leading-[0] rounded-sm cursor-pointer inline-block !opacity-100 "
-                                                                        data-product="6593794375815"
-                                                                        data-variant="40444965879943"
-                                                                        title="Add to <a href='/a/wishlist'>Wishlist</a>"
-                                                                        aria-label="Add to Wishlist" role="button"
-                                                                        tabindex="0"><svg
-                                                                            xmlns="http://www.w3.org/2000/svg"
-                                                                            width="24" height="24" viewBox="0 0 24 24"
-                                                                            fill="none" stroke="currentColor"
-                                                                            stroke-width="2" stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            class="feather feather-heart">
-                                                                            <path
-                                                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                                                            </path>
-                                                                        </svg></span>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div
-                                                            class="block !relative mt-auto top-auto !opacity-100 transform-none">
-                                                            <form action="/cart/add" data-productid="40444965879943" "="">
-                              <input class="hidden" type=" hidden" name="id" data-productid="40444965879943" value="40444965879943"
-                                                                data-variant-title="Red">
-                                                                <button type="submit"
-                                                                    class="relative inline-block border-none rounded-none leading-normal uppercase text-base text-center tracking-[0.75px] transition-colors text-white bg-[#005656] w-full px-[5px] py-4 font-medium">
-                                                                    Add to cart
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                </template>
                                             </div>
                                         </div>
                                         <button type="button" data-role="none" x-on:click="next()"
@@ -1287,38 +982,37 @@
                         </aside>
                     </div>
 
-                    <div class="cart-mobile-order-summary md-max:order-4 hidden md-max:block">
+                    <div class="hidden cart-mobile-order-summary md-max:order-4 md-max:block" @second.window="$el.classList.remove('hidden')">
                         <div class="summary-desc gray md-max:m-0 md-max:pt-6 md-max:pb-4 md-max:border-t md-max:border-t-[#efefef]">
                             <div>
                                 <h2 class="text-center text-lg tracking-[0.4px] font-normal mb-2">Order Summary</h2>
-                                <p class="text-center mb-0">Discounts and Shipping applied at the checkout</p>
+                                <p class="mb-0 text-center">Discounts and Shipping applied at the checkout</p>
                             </div>
                         </div>
-                        <div class="price-list-wrapper gray md-max:border-b md-max:border-b-[#efefef] md-max:mb-4 px-4">
-                            <div>
-                                <ul class="price-list pt-0 -mx-4">
+                        <div class="price-list-wrapper gray md-max:border-b md-max:border-b-[#efefef] md-max:mb-4 px-4 md:flex md:justify-center md:w-full">
+                            <div class="max-w-md">
+                                <ul class="pt-0 -mx-4 price-list">
                                     <li class="flex p-4 font-normal border-t border-t-white">
-                                        <span class="text-sm">Subtotal</span>
-                                        <span class="text-sm ml-auto line-through">$73.80</span>
+                                        <span class="text-sm md:mr-10">Subtotal</span>
+                                        <span class="ml-auto text-sm line-through">$73.80</span>
                                     </li>
                                     <li class="flex p-4 font-normal border-t border-t-white">
-                                        <span class="text-sm">Estimated Shipping
+                                        <span class="text-sm md:mr-10">Estimated Shipping
                     
                                         </span>
-                                        <span class="text-sm ml-auto">$7.36</span>
+                                        <span class="ml-auto text-sm">$7.36</span>
                                     </li>
                                     <li class="flex p-4 font-normal border-t border-t-white">
-                                        <span class="text-sm">Estimated Total</span>
+                                        <span class="text-sm md:mr-10">Estimated Total</span>
                     
-                                        <span class="text-sm ml-auto">$7.36</span>
+                                        <span class="ml-auto text-sm">$7.36</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div x-data="payment">
-                            <!-- x-init="$watch('$refs.second.click')" -->
+                        <div x-data="payment" @second.window="modalIsOpen = true" class="md:flex md:justify-center">
                             <button @click="modalIsOpen = true" type="button" name="checkout"
-                                class="flex items-center justify-center w-full my-4 text-sm uppercase py-[15px] font-medium px-[34px] text-white bg-[#005656] relative leading-[normal] border-0 rounded-none text-center transition-colors tracking-[0.75px] cursor-pointer overflow-visible">
+                                class="flex items-center justify-center w-full my-4 text-sm uppercase py-[15px] font-medium px-[34px] text-white md:max-w-sm bg-[#005656] relative leading-[normal] border-0 rounded-none text-center transition-colors tracking-[0.75px] cursor-pointer overflow-visible">
                                 <svg width="20" height="20" class="text-center text-white" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1329,54 +1023,310 @@
                             </button>
                             <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="modalIsOpen"
                                 @keydown.esc.window="modalIsOpen = false" @click.self="modalIsOpen = false"
-                                class="fixed inset-0 z-30 flex items-center justify-center bg-black/50 p-4 pb-8 backdrop-blur-xl sm:items-center lg:p-8"
+                                class="fixed inset-0 z-30 flex items-center justify-center p-4 pb-8 bg-black/50 backdrop-blur-xl sm:items-center lg:p-8"
                                 role="dialog" aria-modal="true" aria-labelledby="defaultModalTitle">
                                 <!-- Modal Dialog -->
                                 <div x-show="modalIsOpen"
                                     x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity"
                                     x-transition:enter-start="scale-0" x-transition:enter-end="scale-100"
-                                    class="flex max-w-lg flex-col gap-4 rounded-md border overflow-auto max-h-[calc(100vh-50px)] min-w-[calc(100vw-10px)] bg-slate-100 text-neutral-600 transition-all">
+                                    class="flex max-w-md flex-col gap-4 rounded-md border overflow-auto max-h-[calc(100vh-50px)] md-max:min-w-[calc(100vw-10px)] bg-slate-100 text-neutral-600 transition-all">
                                     <!-- Dialog Body -->
-                                    <div class="px-4 py-8 flex items-center justify-center flex-col" x-show="!a" x-cloak>
-                                        <form class="usa-form usa-form--large w-full" name="contact" action="POST" data-netlify`>
+                                    <div class="flex flex-col items-center justify-center px-4 py-8" x-show="!a" x-cloak>
+                                        <form class="w-full usa-form usa-form--large" name="contact" action="POST" data-netlify`>
                                             <legend class="text-xl font-bold">Mailing address</legend>
-                                            <p class="md-max:text-xs text-sm py-2">
+                                            <p class="py-2 text-sm md-max:text-xs">
                                                 Required fields are marked with an asterisk (<abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr>).
                                             </p>
                                             <fieldset 
                                                 x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity"
                                                 x-transition:enter-start="scale-y-0" x-transition:enter-end="scale-y-100" x-transition:leave-start="scale-y-100" x-transition:leave-end="scale-y-0"  class="">
-                                                <label for="first-name" class="text-neutral-800 font-bold text-sm mb-2 block mt-1">Receiver's First Name</label>
+                                                <label for="first-name" class="block mt-1 mb-2 text-sm font-bold text-neutral-800">Receiver's First Name</label>
                                                 <input type="text" name="first-name" id="first-name"
                                                     class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
 
-                                                <label for="last-name" class="text-neutral-800 font-bold text-sm mb-2 block mt-1">Receiver's Last Name</label>
+                                                <label for="last-name" class="block mt-1 mb-2 text-sm font-bold text-neutral-800">Receiver's Last Name</label>
                                                 <input type="text" name="last-name" id="last-name"
                                                     class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
 
-                                                <label for="phone" class="text-neutral-800 font-bold text-sm mb-2 block mt-1">Phone Number <abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
-                                                <input type="tel" name="phone" id="phone"
+                                                <label for="phone" class="block mt-1 mb-2 text-sm font-bold text-neutral-800">Phone Number <abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
+                                                <input type="tel" name="phone" id="phone" x-model="phone"
                                                     class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
 
-                                                <label for="email" class="text-neutral-800 font-bold text-sm mb-2 block mt-1">Receiver's Email</label>
+                                                <label for="email" class="block mt-1 mb-2 text-sm font-bold text-neutral-800">Receiver's Email</label>
                                                 <input type="email" name="email" id="email"
                                                     class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
 
-                                                <label for="mailing-address-1" class="text-neutral-800 font-bold text-sm mb-2 block mt-1">Street address</label>
+                                                <label for="mailing-address-1" class="block mt-1 mb-2 text-sm font-bold text-neutral-800">Street address</label>
                                                 <input type="text" name="mailing-address-1" id="mailing-address-1"
                                                     class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
                                                 
-                                                <label for="mailing-address-2" class="text-neutral-800 font-bold text-sm mb-2 block mt-1">Street address line 2</label>
+                                                <label for="mailing-address-2" class="block mt-1 mb-2 text-sm font-bold text-neutral-800">Street address line 2</label>
                                                 <input type="text" name="mailing-address-2" id="mailing-address-2"
                                                     class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
 
-                                                <label for="city" class="text-neutral-800 font-bold text-sm mb-2 block mt-1">City<abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
+                                                <label for="country" class="block mt-1 mb-2 text-sm font-bold text-neutral-800">Country<abbr title="required"
+                                                        class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
+                                                <select id="country" name="country" x-model="country"
+                                                        class="w-full px-4 py-1 text-sm bg-white border rounded-md appearance-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 disabled:cursor-not-allowed disabled:opacity-75">
+                                                    <option value>- Select -</option>
+                                                    <option value="US">United States</option>
+                                                    <option value="AF">Afghanistan</option>
+                                                    <option value="AX">Åland Islands</option>
+                                                    <option value="AL">Albania</option>
+                                                    <option value="DZ">Algeria</option>
+                                                    <option value="AS">American Samoa</option>
+                                                    <option value="AD">Andorra</option>
+                                                    <option value="AO">Angola</option>
+                                                    <option value="AI">Anguilla</option>
+                                                    <option value="AQ">Antarctica</option>
+                                                    <option value="AG">Antigua and Barbuda</option>
+                                                    <option value="AR">Argentina</option>
+                                                    <option value="AM">Armenia</option>
+                                                    <option value="AW">Aruba</option>
+                                                    <option value="AU">Australia</option>
+                                                    <option value="AT">Austria</option>
+                                                    <option value="AZ">Azerbaijan</option>
+                                                    <option value="BS">Bahamas</option>
+                                                    <option value="BH">Bahrain</option>
+                                                    <option value="BD">Bangladesh</option>
+                                                    <option value="BB">Barbados</option>
+                                                    <option value="BY">Belarus</option>
+                                                    <option value="BE">Belgium</option>
+                                                    <option value="BZ">Belize</option>
+                                                    <option value="BJ">Benin</option>
+                                                    <option value="BM">Bermuda</option>
+                                                    <option value="BT">Bhutan</option>
+                                                    <option value="BO">Bolivia, Plurinational State of</option>
+                                                    <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                                    <option value="BA">Bosnia and Herzegovina</option>
+                                                    <option value="BW">Botswana</option>
+                                                    <option value="BV">Bouvet Island</option>
+                                                    <option value="BR">Brazil</option>
+                                                    <option value="IO">British Indian Ocean Territory</option>
+                                                    <option value="BN">Brunei Darussalam</option>
+                                                    <option value="BG">Bulgaria</option>
+                                                    <option value="BF">Burkina Faso</option>
+                                                    <option value="BI">Burundi</option>
+                                                    <option value="KH">Cambodia</option>
+                                                    <option value="CM">Cameroon</option>
+                                                    <option value="CA">Canada</option>
+                                                    <option value="CV">Cape Verde</option>
+                                                    <option value="KY">Cayman Islands</option>
+                                                    <option value="CF">Central African Republic</option>
+                                                    <option value="TD">Chad</option>
+                                                    <option value="CL">Chile</option>
+                                                    <option value="CN">China</option>
+                                                    <option value="CX">Christmas Island</option>
+                                                    <option value="CC">Cocos (Keeling) Islands</option>
+                                                    <option value="CO">Colombia</option>
+                                                    <option value="KM">Comoros</option>
+                                                    <option value="CG">Congo</option>
+                                                    <option value="CD">Congo, the Democratic Republic of the</option>
+                                                    <option value="CK">Cook Islands</option>
+                                                    <option value="CR">Costa Rica</option>
+                                                    <option value="CI">Côte d'Ivoire</option>
+                                                    <option value="HR">Croatia</option>
+                                                    <option value="CU">Cuba</option>
+                                                    <option value="CW">Curaçao</option>
+                                                    <option value="CY">Cyprus</option>
+                                                    <option value="CZ">Czech Republic</option>
+                                                    <option value="DK">Denmark</option>
+                                                    <option value="DJ">Djibouti</option>
+                                                    <option value="DM">Dominica</option>
+                                                    <option value="DO">Dominican Republic</option>
+                                                    <option value="EC">Ecuador</option>
+                                                    <option value="EG">Egypt</option>
+                                                    <option value="SV">El Salvador</option>
+                                                    <option value="GQ">Equatorial Guinea</option>
+                                                    <option value="ER">Eritrea</option>
+                                                    <option value="EE">Estonia</option>
+                                                    <option value="ET">Ethiopia</option>
+                                                    <option value="FK">Falkland Islands (Malvinas)</option>
+                                                    <option value="FO">Faroe Islands</option>
+                                                    <option value="FJ">Fiji</option>
+                                                    <option value="FI">Finland</option>
+                                                    <option value="FR">France</option>
+                                                    <option value="GF">French Guiana</option>
+                                                    <option value="PF">French Polynesia</option>
+                                                    <option value="TF">French Southern Territories</option>
+                                                    <option value="GA">Gabon</option>
+                                                    <option value="GM">Gambia</option>
+                                                    <option value="GE">Georgia</option>
+                                                    <option value="DE">Germany</option>
+                                                    <option value="GH">Ghana</option>
+                                                    <option value="GI">Gibraltar</option>
+                                                    <option value="GR">Greece</option>
+                                                    <option value="GL">Greenland</option>
+                                                    <option value="GD">Grenada</option>
+                                                    <option value="GP">Guadeloupe</option>
+                                                    <option value="GU">Guam</option>
+                                                    <option value="GT">Guatemala</option>
+                                                    <option value="GG">Guernsey</option>
+                                                    <option value="GN">Guinea</option>
+                                                    <option value="GW">Guinea-Bissau</option>
+                                                    <option value="GY">Guyana</option>
+                                                    <option value="HT">Haiti</option>
+                                                    <option value="HM">Heard Island and McDonald Islands</option>
+                                                    <option value="VA">Holy See (Vatican City State)</option>
+                                                    <option value="HN">Honduras</option>
+                                                    <option value="HK">Hong Kong</option>
+                                                    <option value="HU">Hungary</option>
+                                                    <option value="IS">Iceland</option>
+                                                    <option value="IN">India</option>
+                                                    <option value="ID">Indonesia</option>
+                                                    <option value="IR">Iran, Islamic Republic of</option>
+                                                    <option value="IQ">Iraq</option>
+                                                    <option value="IE">Ireland</option>
+                                                    <option value="IM">Isle of Man</option>
+                                                    <option value="IL">Israel</option>
+                                                    <option value="IT">Italy</option>
+                                                    <option value="JM">Jamaica</option>
+                                                    <option value="JP">Japan</option>
+                                                    <option value="JE">Jersey</option>
+                                                    <option value="JO">Jordan</option>
+                                                    <option value="KZ">Kazakhstan</option>
+                                                    <option value="KE">Kenya</option>
+                                                    <option value="KI">Kiribati</option>
+                                                    <option value="KP">Korea, Democratic People's Republic of</option>
+                                                    <option value="KR">Korea, Republic of</option>
+                                                    <option value="KW">Kuwait</option>
+                                                    <option value="KG">Kyrgyzstan</option>
+                                                    <option value="LA">Lao People's Democratic Republic</option>
+                                                    <option value="LV">Latvia</option>
+                                                    <option value="LB">Lebanon</option>
+                                                    <option value="LS">Lesotho</option>
+                                                    <option value="LR">Liberia</option>
+                                                    <option value="LY">Libya</option>
+                                                    <option value="LI">Liechtenstein</option>
+                                                    <option value="LT">Lithuania</option>
+                                                    <option value="LU">Luxembourg</option>
+                                                    <option value="MO">Macao</option>
+                                                    <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+                                                    <option value="MG">Madagascar</option>
+                                                    <option value="MW">Malawi</option>
+                                                    <option value="MY">Malaysia</option>
+                                                    <option value="MV">Maldives</option>
+                                                    <option value="ML">Mali</option>
+                                                    <option value="MT">Malta</option>
+                                                    <option value="MH">Marshall Islands</option>
+                                                    <option value="MQ">Martinique</option>
+                                                    <option value="MR">Mauritania</option>
+                                                    <option value="MU">Mauritius</option>
+                                                    <option value="YT">Mayotte</option>
+                                                    <option value="MX">Mexico</option>
+                                                    <option value="FM">Micronesia, Federated States of</option>
+                                                    <option value="MD">Moldova, Republic of</option>
+                                                    <option value="MC">Monaco</option>
+                                                    <option value="MN">Mongolia</option>
+                                                    <option value="ME">Montenegro</option>
+                                                    <option value="MS">Montserrat</option>
+                                                    <option value="MA">Morocco</option>
+                                                    <option value="MZ">Mozambique</option>
+                                                    <option value="MM">Myanmar</option>
+                                                    <option value="NA">Namibia</option>
+                                                    <option value="NR">Nauru</option>
+                                                    <option value="NP">Nepal</option>
+                                                    <option value="NL">Netherlands</option>
+                                                    <option value="NC">New Caledonia</option>
+                                                    <option value="NZ">New Zealand</option>
+                                                    <option value="NI">Nicaragua</option>
+                                                    <option value="NE">Niger</option>
+                                                    <option value="NG">Nigeria</option>
+                                                    <option value="NU">Niue</option>
+                                                    <option value="NF">Norfolk Island</option>
+                                                    <option value="MP">Northern Mariana Islands</option>
+                                                    <option value="NO">Norway</option>
+                                                    <option value="OM">Oman</option>
+                                                    <option value="PK">Pakistan</option>
+                                                    <option value="PW">Palau</option>
+                                                    <option value="PS">Palestinian Territory, Occupied</option>
+                                                    <option value="PA">Panama</option>
+                                                    <option value="PG">Papua New Guinea</option>
+                                                    <option value="PY">Paraguay</option>
+                                                    <option value="PE">Peru</option>
+                                                    <option value="PH">Philippines</option>
+                                                    <option value="PN">Pitcairn</option>
+                                                    <option value="PL">Poland</option>
+                                                    <option value="PT">Portugal</option>
+                                                    <option value="PR">Puerto Rico</option>
+                                                    <option value="QA">Qatar</option>
+                                                    <option value="RE">Réunion</option>
+                                                    <option value="RO">Romania</option>
+                                                    <option value="RU">Russian Federation</option>
+                                                    <option value="RW">Rwanda</option>
+                                                    <option value="BL">Saint Barthélemy</option>
+                                                    <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                                                    <option value="KN">Saint Kitts and Nevis</option>
+                                                    <option value="LC">Saint Lucia</option>
+                                                    <option value="MF">Saint Martin (French part)</option>
+                                                    <option value="PM">Saint Pierre and Miquelon</option>
+                                                    <option value="VC">Saint Vincent and the Grenadines</option>
+                                                    <option value="WS">Samoa</option>
+                                                    <option value="SM">San Marino</option>
+                                                    <option value="ST">Sao Tome and Principe</option>
+                                                    <option value="SA">Saudi Arabia</option>
+                                                    <option value="SN">Senegal</option>
+                                                    <option value="RS">Serbia</option>
+                                                    <option value="SC">Seychelles</option>
+                                                    <option value="SL">Sierra Leone</option>
+                                                    <option value="SG">Singapore</option>
+                                                    <option value="SX">Sint Maarten (Dutch part)</option>
+                                                    <option value="SK">Slovakia</option>
+                                                    <option value="SI">Slovenia</option>
+                                                    <option value="SB">Solomon Islands</option>
+                                                    <option value="SO">Somalia</option>
+                                                    <option value="ZA">South Africa</option>
+                                                    <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                                    <option value="SS">South Sudan</option>
+                                                    <option value="ES">Spain</option>
+                                                    <option value="LK">Sri Lanka</option>
+                                                    <option value="SD">Sudan</option>
+                                                    <option value="SR">Suriname</option>
+                                                    <option value="SJ">Svalbard and Jan Mayen</option>
+                                                    <option value="SZ">Swaziland</option>
+                                                    <option value="SE">Sweden</option>
+                                                    <option value="CH">Switzerland</option>
+                                                    <option value="SY">Syrian Arab Republic</option>
+                                                    <option value="TW">Taiwan, Province of China</option>
+                                                    <option value="TJ">Tajikistan</option>
+                                                    <option value="TZ">Tanzania, United Republic of</option>
+                                                    <option value="TH">Thailand</option>
+                                                    <option value="TL">Timor-Leste</option>
+                                                    <option value="TG">Togo</option>
+                                                    <option value="TK">Tokelau</option>
+                                                    <option value="TO">Tonga</option>
+                                                    <option value="TT">Trinidad and Tobago</option>
+                                                    <option value="TN">Tunisia</option>
+                                                    <option value="TR">Turkey</option>
+                                                    <option value="TM">Turkmenistan</option>
+                                                    <option value="TC">Turks and Caicos Islands</option>
+                                                    <option value="TV">Tuvalu</option>
+                                                    <option value="UG">Uganda</option>
+                                                    <option value="UA">Ukraine</option>
+                                                    <option value="AE">United Arab Emirates</option>
+                                                    <option value="GB">United Kingdom</option>
+                                                    <option value="UM">United States Minor Outlying Islands</option>
+                                                    <option value="UY">Uruguay</option>
+                                                    <option value="UZ">Uzbekistan</option>
+                                                    <option value="VU">Vanuatu</option>
+                                                    <option value="VE">Venezuela, Bolivarian Republic of</option>
+                                                    <option value="VN">Viet Nam</option>
+                                                    <option value="VG">Virgin Islands, British</option>
+                                                    <option value="VI">Virgin Islands, U.S.</option>
+                                                    <option value="WF">Wallis and Futuna</option>
+                                                    <option value="EH">Western Sahara</option>
+                                                    <option value="YE">Yemen</option>
+                                                    <option value="ZM">Zambia</option>
+                                                    <option value="ZW">Zimbab</option>
+                                                </select>
+
+                                                <label for="city" class="block mt-1 mb-2 text-sm font-bold text-neutral-800">City<abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
                                                 <input type="text" name="city" id="city" required x-model="city"
                                                     class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
 
-                                                <label for="state" class="text-neutral-800 font-bold text-sm mb-2 block mt-1">State, territory, or military post<abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
-                                                <select id="state" name="state" x-model="state"
-                                                    class="w-full appearance-none rounded-md border bg-white px-4 py-1 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 disabled:cursor-not-allowed disabled:opacity-75">
+                                                <label for="state" class="block mt-1 mb-2 text-sm font-bold text-neutral-800">State, territory, or military post (USA only)<abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
+                                                <select id="state" name="state" x-model="state" :disabled="country != 'US'"
+                                                    class="w-full px-4 py-1 text-sm bg-white border rounded-md appearance-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 disabled:cursor-not-allowed disabled:opacity-75">
                                                     <option value>- Select -</option>
                                                     <option value="AL">AL - Alabama</option>
                                                     <option value="AK">AK - Alaska</option>
@@ -1443,297 +1393,41 @@
                                                     <option value="AP">AP - Armed Forces Pacific</option>
                                                 </select>
 
-                                                <label for="zip" class="text-neutral-800 font-bold text-sm mb-2 block mt-1">ZIP code</label>
+                                                <label for="zip" class="block mt-1 mb-2 text-sm font-bold text-neutral-800">ZIP code</label>
                                                 <input type="text" name="zip" id="zip" pattern="[\d]{5}(-[\d]{4})?"
                                                     class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
 
-                                                <label for="urbanization" class="text-neutral-800 font-bold text-sm mb-2 block mt-1">Urbanization (Puerto Rico only)</label>
-                                                <input type="text" name="urbanization" id="urbanization"
+                                                <label for="urbanization" class="block mt-1 mb-2 text-sm font-bold text-neutral-800">Urbanization (Puerto Rico only)</label>
+                                                <input type="text" name="urbanization" id="urbanization" :disabled="country != 'US'"
                                                     class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
                                                 
-                                                <label for="country" class="text-neutral-800 font-bold text-sm mb-2 block mt-1">Country<abbr
-                                                        title="required"
-                                                        class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
-                                                <select id="country" name="country" x-model="country"
-                                                    class="w-full appearance-none rounded-md border bg-white px-4 py-1 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 disabled:cursor-not-allowed disabled:opacity-75">
-                                                    <option value>- Select -</option>
-                                                    <option value="AF">Afghanistan</option> 
-                                                    <option value="AX">Åland Islands</option> 
-                                                    <option value="AL">Albania</option> 
-                                                    <option value="DZ">Algeria</option> 
-                                                    <option value="AS">American Samoa</option> 
-                                                    <option value="AD">Andorra</option> 
-                                                    <option value="AO">Angola</option> 
-                                                    <option value="AI">Anguilla</option> 
-                                                    <option value="AQ">Antarctica</option> 
-                                                    <option value="AG">Antigua and Barbuda</option> 
-                                                    <option value="AR">Argentina</option> 
-                                                    <option value="AM">Armenia</option> 
-                                                    <option value="AW">Aruba</option> 
-                                                    <option value="AU">Australia</option> 
-                                                    <option value="AT">Austria</option> 
-                                                    <option value="AZ">Azerbaijan</option> 
-                                                    <option value="BS">Bahamas</option> 
-                                                    <option value="BH">Bahrain</option> 
-                                                    <option value="BD">Bangladesh</option> 
-                                                    <option value="BB">Barbados</option> 
-                                                    <option value="BY">Belarus</option> 
-                                                    <option value="BE">Belgium</option> 
-                                                    <option value="BZ">Belize</option> 
-                                                    <option value="BJ">Benin</option> 
-                                                    <option value="BM">Bermuda</option> 
-                                                    <option value="BT">Bhutan</option> 
-                                                    <option value="BO">Bolivia, Plurinational State of</option> 
-                                                    <option value="BQ">Bonaire, Sint Eustatius and Saba</option> 
-                                                    <option value="BA">Bosnia and Herzegovina</option> 
-                                                    <option value="BW">Botswana</option> 
-                                                    <option value="BV">Bouvet Island</option> 
-                                                    <option value="BR">Brazil</option> 
-                                                    <option value="IO">British Indian Ocean Territory</option> 
-                                                    <option value="BN">Brunei Darussalam</option> 
-                                                    <option value="BG">Bulgaria</option> 
-                                                    <option value="BF">Burkina Faso</option> 
-                                                    <option value="BI">Burundi</option> 
-                                                    <option value="KH">Cambodia</option> 
-                                                    <option value="CM">Cameroon</option> 
-                                                    <option value="CA">Canada</option> 
-                                                    <option value="CV">Cape Verde</option> 
-                                                    <option value="KY">Cayman Islands</option> 
-                                                    <option value="CF">Central African Republic</option> 
-                                                    <option value="TD">Chad</option> 
-                                                    <option value="CL">Chile</option> 
-                                                    <option value="CN">China</option> 
-                                                    <option value="CX">Christmas Island</option> 
-                                                    <option value="CC">Cocos (Keeling) Islands</option> 
-                                                    <option value="CO">Colombia</option> 
-                                                    <option value="KM">Comoros</option> 
-                                                    <option value="CG">Congo</option> 
-                                                    <option value="CD">Congo, the Democratic Republic of the</option> 
-                                                    <option value="CK">Cook Islands</option> 
-                                                    <option value="CR">Costa Rica</option> 
-                                                    <option value="CI">Côte d'Ivoire</option> 
-                                                    <option value="HR">Croatia</option> 
-                                                    <option value="CU">Cuba</option> 
-                                                    <option value="CW">Curaçao</option> 
-                                                    <option value="CY">Cyprus</option> 
-                                                    <option value="CZ">Czech Republic</option> 
-                                                    <option value="DK">Denmark</option> 
-                                                    <option value="DJ">Djibouti</option> 
-                                                    <option value="DM">Dominica</option> 
-                                                    <option value="DO">Dominican Republic</option> 
-                                                    <option value="EC">Ecuador</option> 
-                                                    <option value="EG">Egypt</option> 
-                                                    <option value="SV">El Salvador</option> 
-                                                    <option value="GQ">Equatorial Guinea</option> 
-                                                    <option value="ER">Eritrea</option> 
-                                                    <option value="EE">Estonia</option> 
-                                                    <option value="ET">Ethiopia</option> 
-                                                    <option value="FK">Falkland Islands (Malvinas)</option> 
-                                                    <option value="FO">Faroe Islands</option> 
-                                                    <option value="FJ">Fiji</option> 
-                                                    <option value="FI">Finland</option> 
-                                                    <option value="FR">France</option> 
-                                                    <option value="GF">French Guiana</option> 
-                                                    <option value="PF">French Polynesia</option> 
-                                                    <option value="TF">French Southern Territories</option> 
-                                                    <option value="GA">Gabon</option> 
-                                                    <option value="GM">Gambia</option> 
-                                                    <option value="GE">Georgia</option> 
-                                                    <option value="DE">Germany</option> 
-                                                    <option value="GH">Ghana</option> 
-                                                    <option value="GI">Gibraltar</option> 
-                                                    <option value="GR">Greece</option> 
-                                                    <option value="GL">Greenland</option> 
-                                                    <option value="GD">Grenada</option> 
-                                                    <option value="GP">Guadeloupe</option> 
-                                                    <option value="GU">Guam</option> 
-                                                    <option value="GT">Guatemala</option> 
-                                                    <option value="GG">Guernsey</option> 
-                                                    <option value="GN">Guinea</option> 
-                                                    <option value="GW">Guinea-Bissau</option> 
-                                                    <option value="GY">Guyana</option> 
-                                                    <option value="HT">Haiti</option> 
-                                                    <option value="HM">Heard Island and McDonald Islands</option> 
-                                                    <option value="VA">Holy See (Vatican City State)</option> 
-                                                    <option value="HN">Honduras</option> 
-                                                    <option value="HK">Hong Kong</option> 
-                                                    <option value="HU">Hungary</option> 
-                                                    <option value="IS">Iceland</option> 
-                                                    <option value="IN">India</option> 
-                                                    <option value="ID">Indonesia</option> 
-                                                    <option value="IR">Iran, Islamic Republic of</option> 
-                                                    <option value="IQ">Iraq</option> 
-                                                    <option value="IE">Ireland</option> 
-                                                    <option value="IM">Isle of Man</option> 
-                                                    <option value="IL">Israel</option> 
-                                                    <option value="IT">Italy</option> 
-                                                    <option value="JM">Jamaica</option> 
-                                                    <option value="JP">Japan</option> 
-                                                    <option value="JE">Jersey</option> 
-                                                    <option value="JO">Jordan</option> 
-                                                    <option value="KZ">Kazakhstan</option> 
-                                                    <option value="KE">Kenya</option> 
-                                                    <option value="KI">Kiribati</option> 
-                                                    <option value="KP">Korea, Democratic People's Republic of</option> 
-                                                    <option value="KR">Korea, Republic of</option> 
-                                                    <option value="KW">Kuwait</option> 
-                                                    <option value="KG">Kyrgyzstan</option> 
-                                                    <option value="LA">Lao People's Democratic Republic</option> 
-                                                    <option value="LV">Latvia</option> 
-                                                    <option value="LB">Lebanon</option> 
-                                                    <option value="LS">Lesotho</option> 
-                                                    <option value="LR">Liberia</option> 
-                                                    <option value="LY">Libya</option> 
-                                                    <option value="LI">Liechtenstein</option> 
-                                                    <option value="LT">Lithuania</option> 
-                                                    <option value="LU">Luxembourg</option> 
-                                                    <option value="MO">Macao</option> 
-                                                    <option value="MK">Macedonia, the former Yugoslav Republic of</option> 
-                                                    <option value="MG">Madagascar</option> 
-                                                    <option value="MW">Malawi</option> 
-                                                    <option value="MY">Malaysia</option> 
-                                                    <option value="MV">Maldives</option> 
-                                                    <option value="ML">Mali</option> 
-                                                    <option value="MT">Malta</option> 
-                                                    <option value="MH">Marshall Islands</option> 
-                                                    <option value="MQ">Martinique</option> 
-                                                    <option value="MR">Mauritania</option> 
-                                                    <option value="MU">Mauritius</option> 
-                                                    <option value="YT">Mayotte</option> 
-                                                    <option value="MX">Mexico</option> 
-                                                    <option value="FM">Micronesia, Federated States of</option> 
-                                                    <option value="MD">Moldova, Republic of</option> 
-                                                    <option value="MC">Monaco</option> 
-                                                    <option value="MN">Mongolia</option> 
-                                                    <option value="ME">Montenegro</option> 
-                                                    <option value="MS">Montserrat</option> 
-                                                    <option value="MA">Morocco</option> 
-                                                    <option value="MZ">Mozambique</option> 
-                                                    <option value="MM">Myanmar</option> 
-                                                    <option value="NA">Namibia</option> 
-                                                    <option value="NR">Nauru</option> 
-                                                    <option value="NP">Nepal</option> 
-                                                    <option value="NL">Netherlands</option> 
-                                                    <option value="NC">New Caledonia</option> 
-                                                    <option value="NZ">New Zealand</option> 
-                                                    <option value="NI">Nicaragua</option> 
-                                                    <option value="NE">Niger</option> 
-                                                    <option value="NG">Nigeria</option> 
-                                                    <option value="NU">Niue</option> 
-                                                    <option value="NF">Norfolk Island</option> 
-                                                    <option value="MP">Northern Mariana Islands</option> 
-                                                    <option value="NO">Norway</option> 
-                                                    <option value="OM">Oman</option> 
-                                                    <option value="PK">Pakistan</option> 
-                                                    <option value="PW">Palau</option> 
-                                                    <option value="PS">Palestinian Territory, Occupied</option> 
-                                                    <option value="PA">Panama</option> 
-                                                    <option value="PG">Papua New Guinea</option> 
-                                                    <option value="PY">Paraguay</option> 
-                                                    <option value="PE">Peru</option> 
-                                                    <option value="PH">Philippines</option> 
-                                                    <option value="PN">Pitcairn</option> 
-                                                    <option value="PL">Poland</option> 
-                                                    <option value="PT">Portugal</option> 
-                                                    <option value="PR">Puerto Rico</option> 
-                                                    <option value="QA">Qatar</option> 
-                                                    <option value="RE">Réunion</option> 
-                                                    <option value="RO">Romania</option> 
-                                                    <option value="RU">Russian Federation</option> 
-                                                    <option value="RW">Rwanda</option> 
-                                                    <option value="BL">Saint Barthélemy</option> 
-                                                    <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option> 
-                                                    <option value="KN">Saint Kitts and Nevis</option> 
-                                                    <option value="LC">Saint Lucia</option> 
-                                                    <option value="MF">Saint Martin (French part)</option> 
-                                                    <option value="PM">Saint Pierre and Miquelon</option> 
-                                                    <option value="VC">Saint Vincent and the Grenadines</option> 
-                                                    <option value="WS">Samoa</option> 
-                                                    <option value="SM">San Marino</option> 
-                                                    <option value="ST">Sao Tome and Principe</option> 
-                                                    <option value="SA">Saudi Arabia</option> 
-                                                    <option value="SN">Senegal</option> 
-                                                    <option value="RS">Serbia</option> 
-                                                    <option value="SC">Seychelles</option> 
-                                                    <option value="SL">Sierra Leone</option> 
-                                                    <option value="SG">Singapore</option> 
-                                                    <option value="SX">Sint Maarten (Dutch part)</option> 
-                                                    <option value="SK">Slovakia</option> 
-                                                    <option value="SI">Slovenia</option> 
-                                                    <option value="SB">Solomon Islands</option> 
-                                                    <option value="SO">Somalia</option> 
-                                                    <option value="ZA">South Africa</option> 
-                                                    <option value="GS">South Georgia and the South Sandwich Islands</option> 
-                                                    <option value="SS">South Sudan</option> 
-                                                    <option value="ES">Spain</option> 
-                                                    <option value="LK">Sri Lanka</option> 
-                                                    <option value="SD">Sudan</option> 
-                                                    <option value="SR">Suriname</option> 
-                                                    <option value="SJ">Svalbard and Jan Mayen</option> 
-                                                    <option value="SZ">Swaziland</option> 
-                                                    <option value="SE">Sweden</option> 
-                                                    <option value="CH">Switzerland</option> 
-                                                    <option value="SY">Syrian Arab Republic</option> 
-                                                    <option value="TW">Taiwan, Province of China</option> 
-                                                    <option value="TJ">Tajikistan</option> 
-                                                    <option value="TZ">Tanzania, United Republic of</option> 
-                                                    <option value="TH">Thailand</option> 
-                                                    <option value="TL">Timor-Leste</option> 
-                                                    <option value="TG">Togo</option> 
-                                                    <option value="TK">Tokelau</option> 
-                                                    <option value="TO">Tonga</option> 
-                                                    <option value="TT">Trinidad and Tobago</option> 
-                                                    <option value="TN">Tunisia</option> 
-                                                    <option value="TR">Turkey</option> 
-                                                    <option value="TM">Turkmenistan</option> 
-                                                    <option value="TC">Turks and Caicos Islands</option> 
-                                                    <option value="TV">Tuvalu</option> 
-                                                    <option value="UG">Uganda</option> 
-                                                    <option value="UA">Ukraine</option> 
-                                                    <option value="AE">United Arab Emirates</option> 
-                                                    <option value="GB">United Kingdom</option> 
-                                                    <option value="US">United States</option> 
-                                                    <option value="UM">United States Minor Outlying Islands</option> 
-                                                    <option value="UY">Uruguay</option> 
-                                                    <option value="UZ">Uzbekistan</option> 
-                                                    <option value="VU">Vanuatu</option> 
-                                                    <option value="VE">Venezuela, Bolivarian Republic of</option> 
-                                                    <option value="VN">Viet Nam</option> 
-                                                    <option value="VG">Virgin Islands, British</option> 
-                                                    <option value="VI">Virgin Islands, U.S.</option> 
-                                                    <option value="WF">Wallis and Futuna</option> 
-                                                    <option value="EH">Western Sahara</option> 
-                                                    <option value="YE">Yemen</option> 
-                                                    <option value="ZM">Zambia</option> 
-                                                    <option value="ZW">Zimbab</option> 
-                                                </select>
                                                 <div class="py-4">
-                                                    <button @click="a = true" type="button" :disabled="!country || !city || !state"
+                                                    <button @click="a = true" type="button" :disabled="(country == 'US' && !(city && state)) || (!country || !city) || !phone"
                                                         class="cursor-pointer rounded-none whitespace-nowrapflex items-center justify-center w-full my-4 text-sm uppercase py-[15px] font-medium min-w-56 px-[34px] text-white bg-[#005656] relative leading-[normal] border-0 text-center tracking-[0.75px] overflow-visible transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 active:opacity-100 active:outline-offset-0 disabled:opacity-50 disabled:cursor-not-allowed">Proceed
                                                         to pay</button>
                                                 </div>
                                             </fieldset>
                                         </form>
                                     </div>
-                                    <div class="px-4 pt-8 flex items-center justify-center flex-col" x-show="a" x-cloak>
+                                    <div class="flex flex-col items-center justify-center px-4 pt-8" x-show="a" x-cloak>
                                         <form action="">
-                                            <label for="" class="text-neutral-800 font-bold text-sm mb-2 block mt-1">Card number</label>
+                                            <label for="" class="block mt-1 mb-2 text-sm font-bold text-neutral-800">Card number</label>
                                             <input type="text" name="" id="" class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="1234 5678 9012 3456" x-mask:dynamic="cc_mask" x-model="cc">
-                                            <div class="flex gap-x-2 mb-4">
+                                            <div class="flex mb-4 gap-x-2">
                                                 <div class="flex-1">
-                                                    <label for="" class="text-neutral-800 font-bold text-sm mb-2 block mt-1">Exp. date</label>
+                                                    <label for="" class="block mt-1 mb-2 text-sm font-bold text-neutral-800">Exp. date</label>
                                                     <input type="text" name="" id="" class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="MM/YY" x-mask="99/99" x-model="exp">
                                                 </div>
                                                 <div class="flex-1">
-                                                    <label for="" class="text-neutral-800 font-bold text-sm mb-2 block mt-1">CVV</label>
+                                                    <label for="" class="block mt-1 mb-2 text-sm font-bold text-neutral-800">CVV</label>
                                                     <input type="text" name="" id="" class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="123" x-mask="999" x-model="cvv">
                                                 </div>
                                             </div>
-                                            <label for="" class="text-neutral-800 font-bold text-sm mb-2 block mt-1">Card holder</label>
+                                            <label for="" class="block mt-1 mb-2 text-sm font-bold text-neutral-800">Card holder</label>
                                             <input type="text" name="" id="" class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="John Doe" x-on:keydown.enter="submit" x-trap="true" x-model="cc_holder">
                                         </form>
                                         <div x-data="{visible: false, start: 0, target: 7.63, duration: 500}" x-intersect:enter.full="visible = true" x-intersect:leave="visible = false; start = 0" x-init="$watch('visible', value => {const $el = $refs.el; const step = (timestamp) => {if (!start) start = timestamp; const progress = timestamp - start; const percentage = Math.min(progress / duration, 1); const value = parseFloat((percentage * target).toFixed(2)); $el.innerHTML = '$' + value.toLocaleString(); if (progress < duration) { window.requestAnimationFrame(step); }}; window.requestAnimationFrame(step)})">
-                                            <h3 class="text-center pt-8 text-2xl text-black font-black" x-ref="el">$0</h3>
+                                            <h3 class="pt-8 text-2xl font-black text-center text-black" x-ref="el">$0</h3>
                                         </div>
                                         <div class="p-4 pt-0">
                                             <button @click="a = false" type="button"
@@ -1742,7 +1436,7 @@
                                         </div>
                                     </div>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
-                                        class="size-7 fill-neutral-600 motion-safe:animate-spin hidden">
+                                        class="hidden size-7 fill-neutral-600 motion-safe:animate-spin">
                                         <path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25" />
                                         <path
                                             d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z" />
@@ -1750,7 +1444,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="help-wrapper px-4">
+                        <div class="px-4 help-wrapper">
                             <div class="payment-icons">
                                 <div class="payment-icons">
                                     <ul class="flex flex-row flex-wrap gap-2.5 justify-center mx-auto max-w-60 p-0">
@@ -1974,7 +1668,7 @@
                             </div>
                             <div class="pt-4 text-center w-[310px] max-w-full mx-auto">
                     
-                                <a class="text-sm font-normal underline text-black" href="/pages/shipping-policy">Shipping Policy</a>
+                                <a class="text-sm font-normal text-black underline" href="/pages/shipping-policy">Shipping Policy</a>
                     
                             </div>
                         </div>
@@ -2022,7 +1716,7 @@
             </div>
         </main>
         <div class="flex-shrink-0 mb-3">
-            <div class="sm-device:py-10 text-black">
+            <div class="text-black sm-device:py-10">
                 <div class="max-w-[1300px] px-[15px] mx-auto">
                     <div class="block p-0 text-[0] -ml-[25px]">
                         <div class="xs:w-1/2 md:w-1/3 lg:w-1/4 xs:mb-[50px] inline-block pl-[25px] align-top"
@@ -2030,7 +1724,7 @@
                             data-gtm-vis-total-visible-time41299752_133="100" data-gtm-vis-has-fired41299752_133="1">
                             <h2 class="uppercase xs:text-sm text-[#a3a3a3] xs:tracking-[2.8px] font-medium mb-[11px]">Contact</h2>
                             <p class="text-sm mb-[14px] font-normal">Call Us at 1.844.988.0027
-                                <br><a href="mailto:CS@Loversstores.com" class="link">CS@Loversstores.com</a>
+                                <br><a href="mailto:CS@loversstores.netlify.app" class="link">CS@loversstores.netlify.app</a>
                             </p>
                             <p class="text-sm font-normal"><a href="/pages/contact-us">Contact Us</a></p>
                         </div>
@@ -2040,16 +1734,16 @@
                             <h2 class="uppercase xs:text-sm text-[#a3a3a3] xs:tracking-[2.8px] font-medium mb-[11px]">CUSTOMER SERVICE</h2>
                             <ul class="footer__links list--unstyled">
                                 <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="/pages/privacy-policy" class="link">Privacy Policy</a></li>
-                                <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="https://loversstores.com/pages/ca-privacy" class="link">California Privacy Policy</a></li>
+                                <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="https://loversstores.netlify.app/pages/ca-privacy" class="link">California Privacy Policy</a></li>
                                 <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="/policies/terms-of-service" class="link">Terms of Service</a></li>
                                 <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="/pages/sms-terms" class="link">SMS Terms </a></li>
                                 <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="/pages/accessibility" class="link">Accessibility</a></li>
                                 <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="/pages/do-not-sell-or-share-my-personal-information" class="link">Do Not Sell or Share My Personal Information</a></li>
                                 <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="/pages/warranty" class="link">Warranty &amp; Return Policy</a></li>
                                 <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="/pages/lovers-retail-stores" class="link">Lovers Retail Stores</a></li>
-                                <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="https://locations.loversstores.com/" class="link">Store Locator</a></li>
+                                <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="https://locations.loversstores.netlify.app/" class="link">Store Locator</a></li>
                                 <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="/pages/rewards" class="link">Lovers Afterglow™ Rewards</a></li>
-                                <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="https://loversstores.com/pages/faq" class="link">FAQ</a></li>
+                                <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="https://loversstores.netlify.app/pages/faq" class="link">FAQ</a></li>
                             </ul>
                         </div>
                         <div class="xs:w-1/2 md:w-1/3 lg:w-1/4 xs:mb-[50px] inline-block pl-[25px] align-top"
@@ -2057,10 +1751,10 @@
                             data-gtm-vis-total-visible-time41299752_133="100" data-gtm-vis-has-fired41299752_133="1">
                             <h2 class="uppercase xs:text-sm text-[#a3a3a3] xs:tracking-[2.8px] font-medium mb-[11px]">SEX TOYS AND INFO</h2>
                             <ul class="footer__links list--unstyled">
-                                <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="https://loversstores.com/blogs/blog/the-lovers-glossary" class="link">Lovers Glossary</a></li>
+                                <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="https://loversstores.netlify.app/blogs/blog/the-lovers-glossary" class="link">Lovers Glossary</a></li>
                                 <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="/collections/sex-toys" class="link">All Sex Toys</a></li>
                                 <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="/collections/see-whats-new" class="link">New Sex Toys</a></li>
-                                <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="https://loversstores.com/blogs/blog/tagged/education" class="link">Sex Education</a></li>
+                                <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="https://loversstores.netlify.app/blogs/blog/tagged/education" class="link">Sex Education</a></li>
                                 <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="/pages/offer-details" class="link">Offer Details</a></li>
                                 <li class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="/blogs/blog/orgasms-101" class="link">Orgasm Guide</a></li>
                              </ul>
@@ -2071,12 +1765,12 @@
                             <h2 class="uppercase xs:text-sm text-[#a3a3a3] xs:tracking-[2.8px] font-medium mb-[11px]">About the shop</h2>
                             <div class="mb-6">
                                 <p class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm">Headquarters<br>107 Clay St. NW<br>Auburn, WA 98001 </p>
-                                <p class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="http://loversstores.com" title="http://loversstores.com">loversstores.com
+                                <p class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="http://loversstores.netlify.app" title="http://loversstores.netlify.app">loversstores.netlify.app
                                     </a></p>
-                                <p class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="https://loversstores.com/pages/lovers-careers"
-                                        title="https://loversstores.com/pages/lovers-careers">Careers</a></p>
-                                <p class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="https://loversstores.com/pages/about-us"
-                                        title="https://loversstores.com/pages/about-us">About
+                                <p class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="https://loversstores.netlify.app/pages/lovers-careers"
+                                        title="https://loversstores.netlify.app/pages/lovers-careers">Careers</a></p>
+                                <p class="last:mb-0 mb-2 text-[#212b36] font-normal text-sm"><a href="https://loversstores.netlify.app/pages/about-us"
+                                        title="https://loversstores.netlify.app/pages/about-us">About
                                         Us</a></p>
                             </div>
                             <ul class="py-1.5">
@@ -2140,8 +1834,8 @@
                         </div>
                     </div>
                     <div class="xs:mt-0 xs:text-left">
-                        <a href="/" class="text-sm !text-[#2d2926] font-normal">© loversstores.com</a> 
-                        <div class="xs:float-right xs:mt-0 xs:mr-5 items-center flex flex-col flex-nowrap">
+                        <a href="/" class="text-sm !text-[#2d2926] font-normal">© loversstores.netlify.app</a> 
+                        <div class="flex flex-col items-center xs:float-right xs:mt-0 xs:mr-5 flex-nowrap">
                             <div class="xs:mb-5 text-sm tracking-[2.8px] uppercase text-[#a3a3a3] font-normal">Guaranteed Safe Checkout</div>
                             <div class="payment-icons">
                                 <ul class="flex flex-row flex-wrap gap-2.5 justify-center text-sm mx-auto max-w-[240px]">
