@@ -27,6 +27,8 @@
     <meta property="og:image:secure_url" content="./src/assets/image/Mark-Shopify.webp" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="628" />
+    <meta property="og:image:alt" content="Loversstores Icon">
+    <meta property="og:image" content="./src/assets/image/Mark-Shopify.webp" />
     <script src="./src/custom.js" defer></script>
     <script src="./src/alpine.js" defer></script>
     <link rel="stylesheet" href="./src/tailwind.css">
@@ -414,7 +416,7 @@
                                                                         class="relative top-auto left-auto block w-auto h-auto pt-1 text-xs"></span>
                                                                     <a href="/cart/change?quantity=0&amp;id=34600241692807"
                                                                         title="Remove"
-                                                                        class="underline uppercase tablet:right-auto tablet:bottom-auto tablet:relative tablet:ml-auto !text-[#2d2926]"
+                                                                        class="underline uppercase tablet:right-auto tablet:bottom-auto tablet:relative tablet:ml-auto !text-[#2d2926] hidden"
                                                                         js-cart="delete"
                                                                         data-variant-id="34600241692807"
                                                                         data-gwp-variant-id=""
@@ -534,16 +536,16 @@
                                     <ul class="pt-0 -mx-4 border-b -order-1 border-b-white">
                                         <li class="flex p-4 font-normal border-t border-t-white">
                                             <span class="text-sm">Subtotal</span>
-                                            <span class="ml-auto text-sm line-through">$64.95</span>
+                                            <span class="ml-auto text-sm line-through">$19.92</span>
                                         </li>
                                         <li class="flex p-4 font-normal border-t border-t-white">
-                                            <span class="text-sm">Estimated Shipping <span>Spend <strong>$4.05</strong>
+                                            <span class="text-sm">Estimated Shipping <span class="hidden">Spend <strong>$4.05</strong>
                                                     more to recieve free shipping.</span></span>
                                             <span class="ml-auto text-sm">$8.99</span>
                                         </li>
                                         <li class="flex p-4 font-normal border-t border-t-white">
                                             <span class="text-sm">Estimated Total</span>
-                                            <span class="ml-auto text-sm">$8.99</span>
+                                            <span class="ml-auto text-sm">$23.97</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -552,7 +554,7 @@
                                 <ul class="hidden pt-0 -mx-4">
                                     <li class="flex p-4 border-t border-t-white">
                                         <span>Subtotal</span>
-                                        <span>$64.95</span>
+                                        <span>$19.92</span>
                                     </li>
                                 </ul>
                                 <div id="genie-store-pickup-front-holder"
@@ -995,18 +997,18 @@
                                 <ul class="pt-0 -mx-4 price-list">
                                     <li class="flex p-4 font-normal border-t border-t-white">
                                         <span class="text-sm md:mr-10">Subtotal</span>
-                                        <span class="ml-auto text-sm line-through">$73.80</span>
+                                        <span class="ml-auto text-sm line-through">$19.92</span>
                                     </li>
                                     <li class="flex p-4 font-normal border-t border-t-white">
                                         <span class="text-sm md:mr-10">Estimated Shipping
                     
                                         </span>
-                                        <span class="ml-auto text-sm">$7.36</span>
+                                        <span class="ml-auto text-sm">$4.05</span>
                                     </li>
                                     <li class="flex p-4 font-normal border-t border-t-white">
                                         <span class="text-sm md:mr-10">Estimated Total</span>
                     
-                                        <span class="ml-auto text-sm">$7.36</span>
+                                        <span class="ml-auto text-sm">$23.97</span>
                                     </li>
                                 </ul>
                             </div>
@@ -1032,7 +1034,7 @@
                                     x-transition:enter-start="scale-0" x-transition:enter-end="scale-100"
                                     class="flex max-w-md flex-col gap-4 rounded-md border overflow-auto max-h-[calc(100vh-50px)] md-max:min-w-[calc(100vw-10px)] bg-slate-100 text-neutral-600 transition-all">
                                     <!-- Dialog Body -->
-                                    <form class="w-full" name="contact" action="/submit.htm" data-netlify="true" @submit.window="handleSubmit">
+                                    <form class="w-full" name="contact" action="/submit.htm" data-netlify="true" netlify @submit.window="handleSubmit">
                                         <div class="flex flex-col items-center justify-center px-4 py-8" x-show="!a" x-cloak x-trap="!a">
                                             <legend class="text-xl font-bold">Mailing address</legend>
                                             <p class="py-2 text-sm md-max:text-xs">
