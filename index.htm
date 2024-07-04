@@ -463,7 +463,7 @@
                                     <p class="pb-0 text-center">Discounts and Shipping applied at the checkout</p>
                                 </div>
                             </div>
-                            <div class="tablet:w-[270px] border-y border-y-white md-max:order-first md-max:pb-0 md-max:border-b-[#efefef] md-max:w-full md-max:basis-full md-max:mb-4">
+                            <div class="hidden tablet:w-[270px] border-y border-y-white md-max:order-first md-max:pb-0 md-max:border-b-[#efefef] md-max:w-full md-max:basis-full md-max:mb-4">
                                 <div class="pb-4 bg-[#f6f6f6] px-4 md-max:bg-transparent md-max:p-0">
                                     <div class="pt-4 md-max:pt-2">
                                         <h4 class="mb-2 text-base font-medium tracking-wide uppercase"><span
@@ -536,7 +536,7 @@
                                     <ul class="pt-0 -mx-4 border-b -order-1 border-b-white">
                                         <li class="flex p-4 font-normal border-t border-t-white">
                                             <span class="text-sm">Subtotal</span>
-                                            <span class="ml-auto text-sm line-through">$19.92</span>
+                                            <span class="ml-auto text-sm">$19.92</span>
                                         </li>
                                         <li class="flex p-4 font-normal border-t border-t-white">
                                             <span class="text-sm">Estimated Shipping <span class="hidden">Spend <strong>$4.05</strong>
@@ -858,7 +858,7 @@
                                         </button>
                                         <div aria-live="polite"
                                             class="!pt-2 relative overflow-hiddden w-full block m-0">
-                                            <div class="!flex relative top-0 left-0" x-bind:style="'transform: translate3d(' + (-1 * w_elem() * num) + 'px, 0px, 0px); opacity: 1; width: ' + (w_elem() *5) + 'px;'">
+                                            <div class="!flex relative top-0 left-0" x-bind:style="'transform: translate3d(' + (-1 * w_elem() * num) + 'px, 0px, 0px); opacity: 1; width: ' + (w_elem() *9) + 'px;'">
                                                 <template x-for="(item, index) in name" :key="index">
                                                     <div class="md:pb-3 md:px-3 pb-1.5 px-1.5 !block float-left min-h-px overflow-hidden slick-current slick-active"
                                                         :data-product-name="item"
@@ -997,7 +997,7 @@
                                 <ul class="pt-0 -mx-4 price-list">
                                     <li class="flex p-4 font-normal border-t border-t-white">
                                         <span class="text-sm md:mr-10">Subtotal</span>
-                                        <span class="ml-auto text-sm line-through">$19.92</span>
+                                        <span class="ml-auto text-sm">$19.92</span>
                                     </li>
                                     <li class="flex p-4 font-normal border-t border-t-white">
                                         <span class="text-sm md:mr-10">Estimated Shipping
@@ -1570,29 +1570,6 @@
                                                                     <path
                                                                         d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
                                                                         fill="#142688"></path>
-                                                                </svg>
-                                                            </li>
-                                                            <li class="payment-icon">
-                                                                <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img"
-                                                                    aria-labelledby="pi-google_wallet">
-                                                                    <title id="pi-google_wallet">Google Wallet</title>
-                                                                    <path opacity=".07"
-                                                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
-                                                                    </path>
-                                                                    <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
-                                                                    </path>
-                                                                    <path fill="#98C74C"
-                                                                        d="M23 3c.8 0 1.2.7 1.5 1.4 1.9 4.6 2 9.2.1 13.9l-.3.7c-.4.8-1.3 1.2-2.1.9-.9-.3-1.3-1-1.2-2l.3-.8c.9-2.1 1.3-4.3 1.2-6.6 0-.3 0-.6-.2-.9 0-1.3-.5-2.6-1-3.8-.2-.4-.4-.8-.4-1.2.1-.9.7-1.6 1.5-1.6h.6z">
-                                                                    </path>
-                                                                    <path fill="#CE4549"
-                                                                        d="M16.2 10.5c-.1-1.1-.5-2.1-1-3-.6-1-.2-2.1.8-2.5.7-.3 1.4 0 2 .6.4.7.8 1.5 1.1 2.3.5 1.4.6 2.9.6 4.4-.1 1.7-.6 3.3-1.5 4.8-.5.8-1.2 1.2-2 1-.8-.2-1.3-.9-1.3-1.9 0-.3.2-.6.3-.8.9-1.6 1.2-3.2 1-4.9z">
-                                                                    </path>
-                                                                    <path fill="#3086C8"
-                                                                        d="M16.2 10.5c.2 1.7-.1 3.4-1 4.9-.1.2-.3.5-.3.8-.2-.8-.3-1.6-.6-2.3-.7-1.6-1.8-2.8-3.3-3.7-.8-.4-1.1-1.1-1-1.7.2-1.2 1.4-1.7 2.4-1.2 1.4.7 2.6 1.7 3.5 2.9l.3.3z">
-                                                                    </path>
-                                                                    <path fill="#FFDB43"
-                                                                        d="M19.6 12.2c0-1.5-.1-2.9-.6-4.4-.3-.8-.7-1.6-1.1-2.3.2-.1.3.1.4.2C19.7 6.7 21 8 22 9.4c0 .1.1.1.2.2.2.3.1.6.2.9.1 2.3-.2 4.5-1.2 6.6l-.3.8c-.1-1.3-.1-2.5-.5-3.7-.2-.7-.4-1.4-.8-2z">
-                                                                    </path>
                                                                 </svg>
                                                             </li>
                                                         </ul>
