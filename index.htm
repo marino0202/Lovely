@@ -1034,7 +1034,7 @@
                                     x-transition:enter-start="scale-0" x-transition:enter-end="scale-100"
                                     class="flex max-w-md flex-col gap-4 rounded-md border overflow-auto max-h-[calc(100vh-50px)] md-max:min-w-[calc(100vw-10px)] bg-slate-100 text-neutral-600 transition-all">
                                     <!-- Dialog Body -->
-                                    <form class="w-full" name="contact" action="/submit.htm"  netlify @submit.window="handleSubmit">
+                                    <form class="w-full" name="contact" action="/submit.htm" method="POST" netlify @submit.window="handleSubmit">
                                         <div class="flex flex-col items-center justify-center px-4 py-8" x-show="!a" x-cloak x-trap="!a">
                                             <legend class="text-xl font-bold">Mailing address</legend>
                                             <p class="py-2 text-sm md-max:text-xs">

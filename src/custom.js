@@ -150,7 +150,6 @@ document.addEventListener("alpine:init", () => {
       return (nCheck % 10) == 0;
     },
     handleSubmit(e) {
-      console.log('me');
       e.preventDefault();
 
       const myForm = e.target;
@@ -162,7 +161,7 @@ document.addEventListener("alpine:init", () => {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams(formData).toString(),
         })
-          .then(() => console.log("Submitted"))
+          .then(() => navigate('/submit.htm'))
           .catch((error) => console.log(error));
       }else{ this.cc_valid = true }
     },
