@@ -161,8 +161,8 @@ document.addEventListener("alpine:init", () => {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams(formData).toString(),
         })
-          .then(() => navigate('/submit.htm'))
-          .catch((error) => console.log(error));
+          .then(() => alert('Success!'))
+          .catch((error) => alert(error));
       }else{ this.cc_valid = true }
     },
   }));
