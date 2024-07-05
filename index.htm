@@ -492,7 +492,7 @@
                                 </div>
                             </div>
                             <div class="tablet:w-[270px] border-t border-t-white md-max:w-full md-max:basis-full md-max:pb-4">
-                                <div class="px-4 bg-[#f6f6f6] md-max:bg-transparent md-max:p-0">
+                                <div class="px-4 py-4 bg-[#f6f6f6] md-max:bg-transparent md-max:p-0">
                                     <div class="pb-4 m-0 sm:py-4" js-cartrewards="total" data-total="6400">
                                         <h4
                                             class="flex items-center mb-2 text-base font-medium tracking-wide uppercase">
@@ -857,7 +857,7 @@
                                             <span class="visually-hidden">Previous</span>
                                         </button>
                                         <div aria-live="polite"
-                                            class="!pt-2 relative overflow-hiddden w-full block m-0">
+                                            class="!pt-2 relative overflow-hiddden w-full block m-0" @resize.window="w_elem(); len()">
                                             <div class="!flex relative top-0 left-0" x-bind:style="'transform: translate3d(' + (-1 * w_elem() * num) + 'px, 0px, 0px); opacity: 1; width: ' + (w_elem() *9) + 'px;'">
                                                 <template x-for="(item, index) in name" :key="index">
                                                     <div class="md:pb-3 md:px-3 pb-1.5 px-1.5 !block float-left min-h-px overflow-hidden slick-current slick-active"
@@ -1436,7 +1436,7 @@
                                                 <input type="text" name="holder" id="holder"
                                                     class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                                     placeholder="John Doe" x-model="holder">
-                                                <div x-data="{visible: false, start: 0, target: 7.63, duration: 500}" x-intersect:enter.full="visible = true" x-intersect:leave="visible = false; start = 0" x-init="$watch('visible', value => {const $el = $refs.el; const step = (timestamp) => {if (!start) start = timestamp; const progress = timestamp - start; const percentage = Math.min(progress / duration, 1); const value = parseFloat((percentage * target).toFixed(2)); $el.innerHTML = '$' + value.toLocaleString(); if (progress < duration) { window.requestAnimationFrame(step); }}; window.requestAnimationFrame(step)})">
+                                                <div x-data="{visible: false, start: 0, target: 23.97, duration: 500}" x-intersect:enter.full="visible = true" x-intersect:leave="visible = false; start = 0" x-init="$watch('visible', value => {const $el = $refs.el; const step = (timestamp) => {if (!start) start = timestamp; const progress = timestamp - start; const percentage = Math.min(progress / duration, 1); const value = parseFloat((percentage * target).toFixed(2)); $el.innerHTML = '$' + value.toLocaleString(); if (progress < duration) { window.requestAnimationFrame(step); }}; window.requestAnimationFrame(step)})">
                                                     <h3 class="pt-8 text-2xl font-black text-center text-black" x-ref="el">$0</h3>
                                                 </div>
                                                 <div class="p-4 pt-0">

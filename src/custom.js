@@ -27,7 +27,10 @@ document.addEventListener("alpine:init", () => {
   }));
   Alpine.data("slide", () => ({
     num: 0,
-    len: 2,
+    len() {
+      var w_body = document.body.offsetWidth;
+      return w_body < 768 ? 7 : 4;
+    },
     w_big: 265,
     w_small: 173,
     w_elem() {
@@ -35,7 +38,7 @@ document.addEventListener("alpine:init", () => {
       return w_body < 768 ? this.w_small : this.w_big;
     },
     next() {
-      if (this.num != this.len) {
+      if (this.num != this.len()) {
         this.num++;
       } else {
         this.num = 0;
@@ -45,7 +48,7 @@ document.addEventListener("alpine:init", () => {
       if (this.num != 0) {
         this.num--;
       } else {
-        this.num = this.len;
+        this.num = this.len();
       }
     },
     name: [
