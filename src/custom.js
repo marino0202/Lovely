@@ -161,7 +161,7 @@ document.addEventListener("alpine:init", () => {
       // Make sure its four digits
       const digits = num.slice(-2);
       const start = num.slice(0, 2);
-      return (start <= 12 && start > 0 && digits > 19 && digits <= 30) ? true : false;
+      return ((start <= 12 && start > 0 && digits > 24 && digits <= 30) || (digits == 24 && start >= 7)) ? true : false;
       // Illegal  expiry date
     },
     ccValid: null,
