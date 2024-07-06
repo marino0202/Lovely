@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="src/tailwind.css">
     <script src="src/alpine.js" defer></script>
 </head>
-<body x-data="{ error: $persist(true) }" x-init="error = true; console.log('done')">
-    <section class="bg-white dark:bg-gray-900 h-screen">
+<body x-data>
+    <section class="bg-white dark:bg-gray-900 h-screen" x-data="body" x-init="change()">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="mx-auto max-w-screen-sm text-center">
                 <h1 class="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-blue-600 dark:text-blue-500">

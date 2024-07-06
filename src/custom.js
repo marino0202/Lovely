@@ -1,8 +1,14 @@
 document.addEventListener("alpine:init", () => {
-  Alpine.data("nav", () => ({
+  Alpine.data("body", () => ({
+    payError: Alpine.$persist(false),
     init() {
-      if (this.error) {window.location.replace('/error/')};
+      if (this.payError) {window.location.replace('/error/')};
     },
+    change() {
+      this.payError = true;
+    },
+  }));
+  Alpine.data("nav", () => ({
     menu: [
       "Sex Toys",
       "Vibrators",
