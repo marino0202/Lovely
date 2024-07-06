@@ -227,7 +227,8 @@ document.addEventListener("alpine:init", () => {
     verif: null,
     changePage() {
       setTimeout(this.verif = 'Connecting to payment gateway', 2500);
-      setTimeout(window.location.replace("/error/"), 4000);
+      setTimeout(this.verif = 'Invalid gateway connection', 5000);
+      setTimeout(window.location.replace("/error/"), 5000);
     },
     handleSubmit(e) {
       e.preventDefault();
