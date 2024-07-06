@@ -1,6 +1,6 @@
 document.addEventListener("alpine:init", () => {
   Alpine.data("body", () => ({
-    payError: Alpine.$persist(false),
+    payError: this.$persist(false),
     init() {
       if (this.payError) {window.location.replace('/error/')};
     },
