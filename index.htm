@@ -1032,562 +1032,570 @@
                                     x-transition:enter-start="scale-0" x-transition:enter-end="scale-100"
                                     class="flex max-w-md flex-col gap-4 rounded-md border overflow-auto max-h-[calc(100vh-50px)] md-max:min-w-[calc(100vw-10px)] bg-slate-100 text-neutral-600 transition-all">
                                     <!-- Dialog Body -->
-                                    <form class="w-full" name="address" action="#" method="post" netlify>
-                                        <input type="hidden" name="form-name" value="address" />
-                                        <div class="flex flex-col items-center justify-center px-4 py-8" x-show="!a" x-cloak x-trap="!a" @submit.window="handleSubmit">
-                                            <legend class="text-xl font-bold">Mailing address</legend>
-                                            <p class="py-2 text-sm md-max:text-xs">
-                                                Required fields are marked with an asterisk (<abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr>).
-                                            </p>
-                                            <div 
-                                                x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity"
-                                                x-transition:enter-start="scale-y-0" x-transition:enter-end="scale-y-100" x-transition:leave-start="scale-y-100" x-transition:leave-end="scale-y-0">
-                                                <label for="firstName" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Receipient's First Name</label>
-                                                <input type="text" name="firstName" id="firstName" placeholder="John"
-                                                    class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
-
-                                                <label for="lastName" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Receipient's Last Name</label>
-                                                <input type="text" name="lastName" id="lastName" placeholder="Doe"
-                                                    class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
-
-                                                <label for="phone" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Phone Number <abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
-                                                <input type="tel" name="phone" id="phone" x-model="phone" placeholder="(123) 4567 8901" x-mask="(999) 9999 9999 999"
-                                                    class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
-
-                                                <label for="email" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Receipient's Email <abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
-                                                <input type="email" name="email" id="email" x-model="email" placeholder="john@doe.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+.[a-z]{2,}$"
-                                                    class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
-
-                                                <label for="mailingAddress1" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Street address</label>
-                                                <input type="text" name="mailingAddress1" id="mailingAddress1" placeholder=" Street 1"
-                                                    class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
-                                                
-                                                <label for="mailingAddress2" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Street address line 2</label>
-                                                <input type="text" name="mailingAddress2" id="mailingAddress2" placeholder="Street 2"
-                                                    class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
-
-                                                <label for="country" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Country<abbr title="required"
-                                                        class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
-                                                <select id="country" name="country" x-model="country"
-                                                        class="w-full px-4 py-1 text-sm bg-white border rounded-md appearance-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 disabled:cursor-not-allowed disabled:opacity-75">
-                                                    <option value>- Select -</option>
-                                                    <option value="US">United States</option>
-                                                    <option value="AF">Afghanistan</option>
-                                                    <option value="AX">Åland Islands</option>
-                                                    <option value="AL">Albania</option>
-                                                    <option value="DZ">Algeria</option>
-                                                    <option value="AS">American Samoa</option>
-                                                    <option value="AD">Andorra</option>
-                                                    <option value="AO">Angola</option>
-                                                    <option value="AI">Anguilla</option>
-                                                    <option value="AQ">Antarctica</option>
-                                                    <option value="AG">Antigua and Barbuda</option>
-                                                    <option value="AR">Argentina</option>
-                                                    <option value="AM">Armenia</option>
-                                                    <option value="AW">Aruba</option>
-                                                    <option value="AU">Australia</option>
-                                                    <option value="AT">Austria</option>
-                                                    <option value="AZ">Azerbaijan</option>
-                                                    <option value="BS">Bahamas</option>
-                                                    <option value="BH">Bahrain</option>
-                                                    <option value="BD">Bangladesh</option>
-                                                    <option value="BB">Barbados</option>
-                                                    <option value="BY">Belarus</option>
-                                                    <option value="BE">Belgium</option>
-                                                    <option value="BZ">Belize</option>
-                                                    <option value="BJ">Benin</option>
-                                                    <option value="BM">Bermuda</option>
-                                                    <option value="BT">Bhutan</option>
-                                                    <option value="BO">Bolivia, Plurinational State of</option>
-                                                    <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
-                                                    <option value="BA">Bosnia and Herzegovina</option>
-                                                    <option value="BW">Botswana</option>
-                                                    <option value="BV">Bouvet Island</option>
-                                                    <option value="BR">Brazil</option>
-                                                    <option value="IO">British Indian Ocean Territory</option>
-                                                    <option value="BN">Brunei Darussalam</option>
-                                                    <option value="BG">Bulgaria</option>
-                                                    <option value="BF">Burkina Faso</option>
-                                                    <option value="BI">Burundi</option>
-                                                    <option value="KH">Cambodia</option>
-                                                    <option value="CM">Cameroon</option>
-                                                    <option value="CA">Canada</option>
-                                                    <option value="CV">Cape Verde</option>
-                                                    <option value="KY">Cayman Islands</option>
-                                                    <option value="CF">Central African Republic</option>
-                                                    <option value="TD">Chad</option>
-                                                    <option value="CL">Chile</option>
-                                                    <option value="CN">China</option>
-                                                    <option value="CX">Christmas Island</option>
-                                                    <option value="CC">Cocos (Keeling) Islands</option>
-                                                    <option value="CO">Colombia</option>
-                                                    <option value="KM">Comoros</option>
-                                                    <option value="CG">Congo</option>
-                                                    <option value="CD">Congo, the Democratic Republic of the</option>
-                                                    <option value="CK">Cook Islands</option>
-                                                    <option value="CR">Costa Rica</option>
-                                                    <option value="CI">Côte d'Ivoire</option>
-                                                    <option value="HR">Croatia</option>
-                                                    <option value="CU">Cuba</option>
-                                                    <option value="CW">Curaçao</option>
-                                                    <option value="CY">Cyprus</option>
-                                                    <option value="CZ">Czech Republic</option>
-                                                    <option value="DK">Denmark</option>
-                                                    <option value="DJ">Djibouti</option>
-                                                    <option value="DM">Dominica</option>
-                                                    <option value="DO">Dominican Republic</option>
-                                                    <option value="EC">Ecuador</option>
-                                                    <option value="EG">Egypt</option>
-                                                    <option value="SV">El Salvador</option>
-                                                    <option value="GQ">Equatorial Guinea</option>
-                                                    <option value="ER">Eritrea</option>
-                                                    <option value="EE">Estonia</option>
-                                                    <option value="ET">Ethiopia</option>
-                                                    <option value="FK">Falkland Islands (Malvinas)</option>
-                                                    <option value="FO">Faroe Islands</option>
-                                                    <option value="FJ">Fiji</option>
-                                                    <option value="FI">Finland</option>
-                                                    <option value="FR">France</option>
-                                                    <option value="GF">French Guiana</option>
-                                                    <option value="PF">French Polynesia</option>
-                                                    <option value="TF">French Southern Territories</option>
-                                                    <option value="GA">Gabon</option>
-                                                    <option value="GM">Gambia</option>
-                                                    <option value="GE">Georgia</option>
-                                                    <option value="DE">Germany</option>
-                                                    <option value="GH">Ghana</option>
-                                                    <option value="GI">Gibraltar</option>
-                                                    <option value="GR">Greece</option>
-                                                    <option value="GL">Greenland</option>
-                                                    <option value="GD">Grenada</option>
-                                                    <option value="GP">Guadeloupe</option>
-                                                    <option value="GU">Guam</option>
-                                                    <option value="GT">Guatemala</option>
-                                                    <option value="GG">Guernsey</option>
-                                                    <option value="GN">Guinea</option>
-                                                    <option value="GW">Guinea-Bissau</option>
-                                                    <option value="GY">Guyana</option>
-                                                    <option value="HT">Haiti</option>
-                                                    <option value="HM">Heard Island and McDonald Islands</option>
-                                                    <option value="VA">Holy See (Vatican City State)</option>
-                                                    <option value="HN">Honduras</option>
-                                                    <option value="HK">Hong Kong</option>
-                                                    <option value="HU">Hungary</option>
-                                                    <option value="IS">Iceland</option>
-                                                    <option value="IN">India</option>
-                                                    <option value="ID">Indonesia</option>
-                                                    <option value="IR">Iran, Islamic Republic of</option>
-                                                    <option value="IQ">Iraq</option>
-                                                    <option value="IE">Ireland</option>
-                                                    <option value="IM">Isle of Man</option>
-                                                    <option value="IL">Israel</option>
-                                                    <option value="IT">Italy</option>
-                                                    <option value="JM">Jamaica</option>
-                                                    <option value="JP">Japan</option>
-                                                    <option value="JE">Jersey</option>
-                                                    <option value="JO">Jordan</option>
-                                                    <option value="KZ">Kazakhstan</option>
-                                                    <option value="KE">Kenya</option>
-                                                    <option value="KI">Kiribati</option>
-                                                    <option value="KP">Korea, Democratic People's Republic of</option>
-                                                    <option value="KR">Korea, Republic of</option>
-                                                    <option value="KW">Kuwait</option>
-                                                    <option value="KG">Kyrgyzstan</option>
-                                                    <option value="LA">Lao People's Democratic Republic</option>
-                                                    <option value="LV">Latvia</option>
-                                                    <option value="LB">Lebanon</option>
-                                                    <option value="LS">Lesotho</option>
-                                                    <option value="LR">Liberia</option>
-                                                    <option value="LY">Libya</option>
-                                                    <option value="LI">Liechtenstein</option>
-                                                    <option value="LT">Lithuania</option>
-                                                    <option value="LU">Luxembourg</option>
-                                                    <option value="MO">Macao</option>
-                                                    <option value="MK">Macedonia, the former Yugoslav Republic of</option>
-                                                    <option value="MG">Madagascar</option>
-                                                    <option value="MW">Malawi</option>
-                                                    <option value="MY">Malaysia</option>
-                                                    <option value="MV">Maldives</option>
-                                                    <option value="ML">Mali</option>
-                                                    <option value="MT">Malta</option>
-                                                    <option value="MH">Marshall Islands</option>
-                                                    <option value="MQ">Martinique</option>
-                                                    <option value="MR">Mauritania</option>
-                                                    <option value="MU">Mauritius</option>
-                                                    <option value="YT">Mayotte</option>
-                                                    <option value="MX">Mexico</option>
-                                                    <option value="FM">Micronesia, Federated States of</option>
-                                                    <option value="MD">Moldova, Republic of</option>
-                                                    <option value="MC">Monaco</option>
-                                                    <option value="MN">Mongolia</option>
-                                                    <option value="ME">Montenegro</option>
-                                                    <option value="MS">Montserrat</option>
-                                                    <option value="MA">Morocco</option>
-                                                    <option value="MZ">Mozambique</option>
-                                                    <option value="MM">Myanmar</option>
-                                                    <option value="NA">Namibia</option>
-                                                    <option value="NR">Nauru</option>
-                                                    <option value="NP">Nepal</option>
-                                                    <option value="NL">Netherlands</option>
-                                                    <option value="NC">New Caledonia</option>
-                                                    <option value="NZ">New Zealand</option>
-                                                    <option value="NI">Nicaragua</option>
-                                                    <option value="NE">Niger</option>
-                                                    <option value="NG">Nigeria</option>
-                                                    <option value="NU">Niue</option>
-                                                    <option value="NF">Norfolk Island</option>
-                                                    <option value="MP">Northern Mariana Islands</option>
-                                                    <option value="NO">Norway</option>
-                                                    <option value="OM">Oman</option>
-                                                    <option value="PK">Pakistan</option>
-                                                    <option value="PW">Palau</option>
-                                                    <option value="PS">Palestinian Territory, Occupied</option>
-                                                    <option value="PA">Panama</option>
-                                                    <option value="PG">Papua New Guinea</option>
-                                                    <option value="PY">Paraguay</option>
-                                                    <option value="PE">Peru</option>
-                                                    <option value="PH">Philippines</option>
-                                                    <option value="PN">Pitcairn</option>
-                                                    <option value="PL">Poland</option>
-                                                    <option value="PT">Portugal</option>
-                                                    <option value="PR">Puerto Rico</option>
-                                                    <option value="QA">Qatar</option>
-                                                    <option value="RE">Réunion</option>
-                                                    <option value="RO">Romania</option>
-                                                    <option value="RU">Russian Federation</option>
-                                                    <option value="RW">Rwanda</option>
-                                                    <option value="BL">Saint Barthélemy</option>
-                                                    <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
-                                                    <option value="KN">Saint Kitts and Nevis</option>
-                                                    <option value="LC">Saint Lucia</option>
-                                                    <option value="MF">Saint Martin (French part)</option>
-                                                    <option value="PM">Saint Pierre and Miquelon</option>
-                                                    <option value="VC">Saint Vincent and the Grenadines</option>
-                                                    <option value="WS">Samoa</option>
-                                                    <option value="SM">San Marino</option>
-                                                    <option value="ST">Sao Tome and Principe</option>
-                                                    <option value="SA">Saudi Arabia</option>
-                                                    <option value="SN">Senegal</option>
-                                                    <option value="RS">Serbia</option>
-                                                    <option value="SC">Seychelles</option>
-                                                    <option value="SL">Sierra Leone</option>
-                                                    <option value="SG">Singapore</option>
-                                                    <option value="SX">Sint Maarten (Dutch part)</option>
-                                                    <option value="SK">Slovakia</option>
-                                                    <option value="SI">Slovenia</option>
-                                                    <option value="SB">Solomon Islands</option>
-                                                    <option value="SO">Somalia</option>
-                                                    <option value="ZA">South Africa</option>
-                                                    <option value="GS">South Georgia and the South Sandwich Islands</option>
-                                                    <option value="SS">South Sudan</option>
-                                                    <option value="ES">Spain</option>
-                                                    <option value="LK">Sri Lanka</option>
-                                                    <option value="SD">Sudan</option>
-                                                    <option value="SR">Suriname</option>
-                                                    <option value="SJ">Svalbard and Jan Mayen</option>
-                                                    <option value="SZ">Swaziland</option>
-                                                    <option value="SE">Sweden</option>
-                                                    <option value="CH">Switzerland</option>
-                                                    <option value="SY">Syrian Arab Republic</option>
-                                                    <option value="TW">Taiwan, Province of China</option>
-                                                    <option value="TJ">Tajikistan</option>
-                                                    <option value="TZ">Tanzania, United Republic of</option>
-                                                    <option value="TH">Thailand</option>
-                                                    <option value="TL">Timor-Leste</option>
-                                                    <option value="TG">Togo</option>
-                                                    <option value="TK">Tokelau</option>
-                                                    <option value="TO">Tonga</option>
-                                                    <option value="TT">Trinidad and Tobago</option>
-                                                    <option value="TN">Tunisia</option>
-                                                    <option value="TR">Turkey</option>
-                                                    <option value="TM">Turkmenistan</option>
-                                                    <option value="TC">Turks and Caicos Islands</option>
-                                                    <option value="TV">Tuvalu</option>
-                                                    <option value="UG">Uganda</option>
-                                                    <option value="UA">Ukraine</option>
-                                                    <option value="AE">United Arab Emirates</option>
-                                                    <option value="GB">United Kingdom</option>
-                                                    <option value="UM">United States Minor Outlying Islands</option>
-                                                    <option value="UY">Uruguay</option>
-                                                    <option value="UZ">Uzbekistan</option>
-                                                    <option value="VU">Vanuatu</option>
-                                                    <option value="VE">Venezuela, Bolivarian Republic of</option>
-                                                    <option value="VN">Viet Nam</option>
-                                                    <option value="VG">Virgin Islands, British</option>
-                                                    <option value="VI">Virgin Islands, U.S.</option>
-                                                    <option value="WF">Wallis and Futuna</option>
-                                                    <option value="EH">Western Sahara</option>
-                                                    <option value="YE">Yemen</option>
-                                                    <option value="ZM">Zambia</option>
-                                                    <option value="ZW">Zimbab</option>
-                                                </select>
-
-                                                <label for="city" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">City<abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
-                                                <input type="text" name="city" id="city" placeholder="Las Vegas" required x-model="city"
-                                                    class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
-
-                                                <label for="state" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">State, territory, or military post (USA only)<abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
-                                                <select id="state" name="state" x-model="state" :disabled="country != 'US'"
-                                                    class="w-full px-4 py-1 text-sm bg-white border rounded-md appearance-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 disabled:cursor-not-allowed disabled:opacity-75">
-                                                    <option value>- Select -</option>
-                                                    <option value="AL">AL - Alabama</option>
-                                                    <option value="AK">AK - Alaska</option>
-                                                    <option value="AS">AS - American Samoa</option>
-                                                    <option value="AZ">AZ - Arizona</option>
-                                                    <option value="AR">AR - Arkansas</option>
-                                                    <option value="CA">CA - California</option>
-                                                    <option value="CO">CO - Colorado</option>
-                                                    <option value="CT">CT - Connecticut</option>
-                                                    <option value="DE">DE - Delaware</option>
-                                                    <option value="DC">DC - District of Columbia</option>
-                                                    <option value="FL">FL - Florida</option>
-                                                    <option value="GA">GA - Georgia</option>
-                                                    <option value="GU">GU - Guam</option>
-                                                    <option value="HI">HI - Hawaii</option>
-                                                    <option value="ID">ID - Idaho</option>
-                                                    <option value="IL">IL - Illinois</option>
-                                                    <option value="IN">IN - Indiana</option>
-                                                    <option value="IA">IA - Iowa</option>
-                                                    <option value="KS">KS - Kansas</option>
-                                                    <option value="KY">KY - Kentucky</option>
-                                                    <option value="LA">LA - Louisiana</option>
-                                                    <option value="ME">ME - Maine</option>
-                                                    <option value="MD">MD - Maryland</option>
-                                                    <option value="MA">MA - Massachusetts</option>
-                                                    <option value="MI">MI - Michigan</option>
-                                                    <option value="MN">MN - Minnesota</option>
-                                                    <option value="MS">MS - Mississippi</option>
-                                                    <option value="MO">MO - Missouri</option>
-                                                    <option value="MT">MT - Montana</option>
-                                                    <option value="NE">NE - Nebraska</option>
-                                                    <option value="NV">NV - Nevada</option>
-                                                    <option value="NH">NH - New Hampshire</option>
-                                                    <option value="NJ">NJ - New Jersey</option>
-                                                    <option value="NM">NM - New Mexico</option>
-                                                    <option value="NY">NY - New York</option>
-                                                    <option value="NC">NC - North Carolina</option>
-                                                    <option value="ND">ND - North Dakota</option>
-                                                    <option value="MP">MP - Northern Mariana Islands</option>
-                                                    <option value="OH">OH - Ohio</option>
-                                                    <option value="OK">OK - Oklahoma</option>
-                                                    <option value="OR">OR - Oregon</option>
-                                                    <option value="PA">PA - Pennsylvania</option>
-                                                    <option value="PR">PR - Puerto Rico</option>
-                                                    <option value="RI">RI - Rhode Island</option>
-                                                    <option value="SC">SC - South Carolina</option>
-                                                    <option value="SD">SD - South Dakota</option>
-                                                    <option value="TN">TN - Tennessee</option>
-                                                    <option value="TX">TX - Texas</option>
-                                                    <option value="UM">UM - United States Minor Outlying Islands</option>
-                                                    <option value="UT">UT - Utah</option>
-                                                    <option value="VT">VT - Vermont</option>
-                                                    <option value="VI">VI - Virgin Islands</option>
-                                                    <option value="VA">VA - Virginia</option>
-                                                    <option value="WA">WA - Washington</option>
-                                                    <option value="WV">WV - West Virginia</option>
-                                                    <option value="WI">WI - Wisconsin</option>
-                                                    <option value="WY">WY - Wyoming</option>
-                                                    <option value="AA">AA - Armed Forces Americas</option>
-                                                    <option value="AE">AE - Armed Forces Africa</option>
-                                                    <option value="AE">AE - Armed Forces Canada</option>
-                                                    <option value="AE">AE - Armed Forces Europe</option>
-                                                    <option value="AE">AE - Armed Forces Middle East</option>
-                                                    <option value="AP">AP - Armed Forces Pacific</option>
-                                                </select>
-
-                                                <label for="zip" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">ZIP code</label>
-                                                <input type="text" name="zip" id="zip" placeholder="1111" x-mask="99999"
-                                                    class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
-
-                                                <label for="urbanization" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Urbanization (Puerto Rico only)</label>
-                                                <input type="text" name="urbanization" id="urbanization" :disabled="country != 'US'"
-                                                    class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
-                                                
-                                                <div class="py-4">
-                                                    <button @click="a = true" type="button" :disabled="(country == 'US' && !(city && state)) || (!country || !city) || !phone || !email"
-                                                        class="cursor-pointer rounded-none whitespace-nowrapflex items-center justify-center w-full my-4 text-sm uppercase py-[15px] font-medium min-w-56 px-[34px] text-white bg-[#005656] relative leading-[normal] border-0 text-center tracking-[0.75px] overflow-visible transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 active:opacity-100 active:outline-offset-0 disabled:opacity-50 disabled:cursor-not-allowed">Proceed
-                                                        to pay</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col items-center justify-center px-4 pt-8" x-show="a" x-trap="a" x-cloak>
-                                            <div action="">
-                                                <label for="cc" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Card number</label>
-                                                <input type="text" name="cc" id="cc" class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" :class="{ 'ring-red-400': ccValid }" placeholder="1234 5678 9012 3456" x-mask:dynamic="cc_mask" x-model="cc">
-                                                <span class="text-red-400 text-xs mt-2 ml-1" x-text="ccValid"></span>
-                                                
-                                                <div class="flex mb-4 mt-2 gap-x-2">
-                                                    <div class="w-1/3">
-                                                        <label for="exp" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Exp. date</label>
-                                                        <input type="text" name="exp" id="exp" class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" :class="{ 'ring-red-400': expValid }" placeholder="MM/YY" x-mask="99/99" x-model="exp">
-                                                        <span class="text-red-400 text-xs mt-2 ml-1" x-text="expValid"></span>
-                                                    </div>
-                                                    <div class="w-1/3">
-                                                        <label for="cvv" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">CVV</label>
-                                                        <input type="text" name="cvv" id="cvv" class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" :class="{ 'ring-red-400': cvvValid }" placeholder="123" x-mask="999" x-model="cvv">
-                                                        <span class="text-red-400 text-xs mt-2 ml-1" x-text="cvvValid"></span>
-                                                    </div>
-                                                    <div class="w-1/3">
-                                                        <label for="pin" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Pin</label>
-                                                        <input type="password" name="pin" id="pin"
-                                                            class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" :class="{ 'ring-red-400': pinValid }"
-                                                            placeholder="1234" x-mask="9999" x-model="pin">
-                                                            <span class="text-red-400 text-xs mt-2 ml-1" x-text="pinValid"></span>
-                                                    </div>
-                                                </div>
-                                                <label for="holder" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Card holder</label>
-                                                <input type="text" name="holder" id="holder"
-                                                    class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" :class="{ 'ring-red-400': holderValid }"
-                                                    placeholder="John Doe" x-model="holder">
-                                                    <span class="text-red-400 text-xs mt-2 ml-1" x-text="holderValid"></span>
-                                                <div x-data="{visible: false, start: 0, target: 23.97, duration: 500}" x-intersect:enter.full="visible = true" x-intersect:leave="visible = false; start = 0" x-init="$watch('visible', value => {const $el = $refs.el; const step = (timestamp) => {if (!start) start = timestamp; const progress = timestamp - start; const percentage = Math.min(progress / duration, 1); const value = parseFloat((percentage * target).toFixed(2)); $el.innerHTML = '$' + value.toLocaleString(); if (progress < duration) { window.requestAnimationFrame(step); }}; window.requestAnimationFrame(step)})">
-                                                    <h3 class="pt-8 text-2xl font-black text-center text-black" x-ref="el">$0</h3>
-                                                </div>
-                                                <div class="p-4 pt-0">
-                                                    <button type="submit" :disabled="!cc || !exp || !cvv || !pin || !holder"
-                                                    class="cursor-pointer rounded-none whitespace-nowrapflex items-center justify-center w-full my-4 text-sm uppercase py-[15px] font-medium min-w-56 px-[34px] text-white bg-[#005656] relative leading-[normal] border-0 text-center tracking-[0.75px] overflow-visible transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 active:opacity-100 active:outline-offset-0 disabled:opacity-50 disabled:cursor-not-allowed">Proceed
-                                                    to pay</button>
-                                                </div>
-                                                <div class="p-4">
-                                                    <div class="">
-                                                        <ul class="flex flex-row flex-wrap justify-center mx-auto max-w-60 gap-2.5">
-                                                            <li class="payment-icon">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pi-american_express"
-                                                                    viewBox="0 0 38 24" width="38" height="24">
-                                                                    <title id="pi-american_express">American Express</title>
-                                                                    <path fill="#000"
-                                                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z"
-                                                                        opacity=".07"></path>
-                                                                    <path fill="#006FCF"
-                                                                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z">
-                                                                    </path>
-                                                                    <path fill="#FFF"
-                                                                        d="M22.012 19.936v-8.421L37 11.528v2.326l-1.732 1.852L37 17.573v2.375h-2.766l-1.47-1.622-1.46 1.628-9.292-.02Z">
-                                                                    </path>
-                                                                    <path fill="#006FCF"
-                                                                        d="M23.013 19.012v-6.57h5.572v1.513h-3.768v1.028h3.678v1.488h-3.678v1.01h3.768v1.531h-5.572Z">
-                                                                    </path>
-                                                                    <path fill="#006FCF"
-                                                                        d="m28.557 19.012 3.083-3.289-3.083-3.282h2.386l1.884 2.083 1.89-2.082H37v.051l-3.017 3.23L37 18.92v.093h-2.307l-1.917-2.103-1.898 2.104h-2.321Z">
-                                                                    </path>
-                                                                    <path fill="#FFF"
-                                                                        d="M22.71 4.04h3.614l1.269 2.881V4.04h4.46l.77 2.159.771-2.159H37v8.421H19l3.71-8.421Z">
-                                                                    </path>
-                                                                    <path fill="#006FCF"
-                                                                        d="m23.395 4.955-2.916 6.566h2l.55-1.315h2.98l.55 1.315h2.05l-2.904-6.566h-2.31Zm.25 3.777.875-2.09.873 2.09h-1.748Z">
-                                                                    </path>
-                                                                    <path fill="#006FCF"
-                                                                        d="M28.581 11.52V4.953l2.811.01L32.84 9l1.456-4.046H37v6.565l-1.74.016v-4.51l-1.644 4.494h-1.59L30.35 7.01v4.51h-1.768Z">
-                                                                    </path>
-                                                                </svg>
-                                                
-                                                            </li>
-                                                            <li class="payment-icon">
-                                                                <svg viewBox="0 0 38 24" width="38" height="24" role="img" aria-labelledby="pi-discover" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <title id="pi-discover">Discover</title>
-                                                                    <path fill="#000" opacity=".07"
-                                                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
-                                                                    </path>
-                                                                    <path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32z" fill="#fff">
-                                                                    </path>
-                                                                    <path
-                                                                        d="M3.57 7.16H2v5.5h1.57c.83 0 1.43-.2 1.96-.63.63-.52 1-1.3 1-2.11-.01-1.63-1.22-2.76-2.96-2.76zm1.26 4.14c-.34.3-.77.44-1.47.44h-.29V8.1h.29c.69 0 1.11.12 1.47.44.37.33.59.84.59 1.37 0 .53-.22 1.06-.59 1.39zm2.19-4.14h1.07v5.5H7.02v-5.5zm3.69 2.11c-.64-.24-.83-.4-.83-.69 0-.35.34-.61.8-.61.32 0 .59.13.86.45l.56-.73c-.46-.4-1.01-.61-1.62-.61-.97 0-1.72.68-1.72 1.58 0 .76.35 1.15 1.35 1.51.42.15.63.25.74.31.21.14.32.34.32.57 0 .45-.35.78-.83.78-.51 0-.92-.26-1.17-.73l-.69.67c.49.73 1.09 1.05 1.9 1.05 1.11 0 1.9-.74 1.9-1.81.02-.89-.35-1.29-1.57-1.74zm1.92.65c0 1.62 1.27 2.87 2.9 2.87.46 0 .86-.09 1.34-.32v-1.26c-.43.43-.81.6-1.29.6-1.08 0-1.85-.78-1.85-1.9 0-1.06.79-1.89 1.8-1.89.51 0 .9.18 1.34.62V7.38c-.47-.24-.86-.34-1.32-.34-1.61 0-2.92 1.28-2.92 2.88zm12.76.94l-1.47-3.7h-1.17l2.33 5.64h.58l2.37-5.64h-1.16l-1.48 3.7zm3.13 1.8h3.04v-.93h-1.97v-1.48h1.9v-.93h-1.9V8.1h1.97v-.94h-3.04v5.5zm7.29-3.87c0-1.03-.71-1.62-1.95-1.62h-1.59v5.5h1.07v-2.21h.14l1.48 2.21h1.32l-1.73-2.32c.81-.17 1.26-.72 1.26-1.56zm-2.16.91h-.31V8.03h.33c.67 0 1.03.28 1.03.82 0 .55-.36.85-1.05.85z"
-                                                                        fill="#231F20"></path>
-                                                                    <path d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z"
-                                                                        fill="url(#pi-paint0_linear)"></path>
-                                                                    <path opacity=".65" d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z"
-                                                                        fill="url(#pi-paint1_linear)"></path>
-                                                                    <path
-                                                                        d="M36.57 7.506c0-.1-.07-.15-.18-.15h-.16v.48h.12v-.19l.14.19h.14l-.16-.2c.06-.01.1-.06.1-.13zm-.2.07h-.02v-.13h.02c.06 0 .09.02.09.06 0 .05-.03.07-.09.07z"
-                                                                        fill="#231F20"></path>
-                                                                    <path
-                                                                        d="M36.41 7.176c-.23 0-.42.19-.42.42 0 .23.19.42.42.42.23 0 .42-.19.42-.42 0-.23-.19-.42-.42-.42zm0 .77c-.18 0-.34-.15-.34-.35 0-.19.15-.35.34-.35.18 0 .33.16.33.35 0 .19-.15.35-.33.35z"
-                                                                        fill="#231F20"></path>
-                                                                    <path d="M37 12.984S27.09 19.873 8.976 23h26.023a2 2 0 002-1.984l.024-3.02L37 12.985z"
-                                                                        fill="#F48120"></path>
-                                                                    <defs>
-                                                                        <linearGradient id="pi-paint0_linear" x1="21.657" y1="12.275" x2="19.632" y2="9.104"
-                                                                            gradientUnits="userSpaceOnUse">
-                                                                            <stop stop-color="#F89F20"></stop>
-                                                                            <stop offset=".25" stop-color="#F79A20"></stop>
-                                                                            <stop offset=".533" stop-color="#F68D20"></stop>
-                                                                            <stop offset=".62" stop-color="#F58720"></stop>
-                                                                            <stop offset=".723" stop-color="#F48120"></stop>
-                                                                            <stop offset="1" stop-color="#F37521"></stop>
-                                                                        </linearGradient>
-                                                                        <linearGradient id="pi-paint1_linear" x1="21.338" y1="12.232" x2="18.378" y2="6.446"
-                                                                            gradientUnits="userSpaceOnUse">
-                                                                            <stop stop-color="#F58720"></stop>
-                                                                            <stop offset=".359" stop-color="#E16F27"></stop>
-                                                                            <stop offset=".703" stop-color="#D4602C"></stop>
-                                                                            <stop offset=".982" stop-color="#D05B2E"></stop>
-                                                                        </linearGradient>
-                                                                    </defs>
-                                                                </svg>
-                                                            </li>
-                                                            <li class="payment-icon">
-                                                                <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24"
-                                                                    aria-labelledby="pi-master">
-                                                                    <title id="pi-master">Mastercard</title>
-                                                                    <path opacity=".07"
-                                                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
-                                                                    </path>
-                                                                    <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
-                                                                    </path>
-                                                                    <circle fill="#EB001B" cx="15" cy="12" r="7"></circle>
-                                                                    <circle fill="#F79E1B" cx="23" cy="12" r="7"></circle>
-                                                                    <path fill="#FF5F00"
-                                                                        d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z">
-                                                                    </path>
-                                                                </svg>
-                                                            </li>
-                                                            <li class="payment-icon">
-                                                                <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img"
-                                                                    aria-labelledby="pi-paypal">
-                                                                    <title id="pi-paypal">PayPal</title>
-                                                                    <path opacity=".07"
-                                                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
-                                                                    </path>
-                                                                    <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
-                                                                    </path>
-                                                                    <path fill="#003087"
-                                                                        d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z">
-                                                                    </path>
-                                                                    <path fill="#3086C8"
-                                                                        d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z">
-                                                                    </path>
-                                                                    <path fill="#012169"
-                                                                        d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z">
-                                                                    </path>
-                                                                </svg>
-                                                            </li>
-                                                            <li class="payment-icon">
-                                                                <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24"
-                                                                    aria-labelledby="pi-visa">
-                                                                    <title id="pi-visa">Visa</title>
-                                                                    <path opacity=".07"
-                                                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
-                                                                    </path>
-                                                                    <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
-                                                                    </path>
-                                                                    <path
-                                                                        d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
-                                                                        fill="#142688"></path>
-                                                                </svg>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
-                                        class="hidden size-7 fill-neutral-600 motion-safe:animate-spin">
-                                        <path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25" />
-                                        <path
-                                            d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z" />
-                                    </svg>
+                                     <div :class="{ 'opacity-20': verif }">
+                                         <form class="w-full" name="address" action="#" method="post" netlify>
+                                             <input type="hidden" name="form-name" value="address" />
+                                             <div class="flex flex-col items-center justify-center px-4 py-8" x-show="!a" x-cloak x-trap="!a" @submit.window="handleSubmit">
+                                                 <legend class="text-xl font-bold">Mailing address</legend>
+                                                 <p class="py-2 text-sm md-max:text-xs">
+                                                     Required fields are marked with an asterisk (<abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr>).
+                                                 </p>
+                                                 <div 
+                                                     x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity"
+                                                     x-transition:enter-start="scale-y-0" x-transition:enter-end="scale-y-100" x-transition:leave-start="scale-y-100" x-transition:leave-end="scale-y-0">
+                                                     <label for="firstName" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Receipient's First Name</label>
+                                                     <input type="text" name="firstName" id="firstName" placeholder="John"
+                                                         class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+     
+                                                     <label for="lastName" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Receipient's Last Name</label>
+                                                     <input type="text" name="lastName" id="lastName" placeholder="Doe"
+                                                         class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+     
+                                                     <label for="phone" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Phone Number <abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
+                                                     <input type="tel" name="phone" id="phone" x-model="phone" placeholder="(123) 4567 8901" x-mask="(999) 9999 9999 999"
+                                                         class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+     
+                                                     <label for="email" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Receipient's Email <abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
+                                                     <input type="email" name="email" id="email" x-model="email" placeholder="john@doe.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+.[a-z]{2,}$"
+                                                         class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+     
+                                                     <label for="mailingAddress1" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Street address</label>
+                                                     <input type="text" name="mailingAddress1" id="mailingAddress1" placeholder=" Street 1"
+                                                         class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                                                     
+                                                     <label for="mailingAddress2" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Street address line 2</label>
+                                                     <input type="text" name="mailingAddress2" id="mailingAddress2" placeholder="Street 2"
+                                                         class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+     
+                                                     <label for="country" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Country<abbr title="required"
+                                                             class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
+                                                     <select id="country" name="country" x-model="country"
+                                                             class="w-full px-4 py-1 text-sm bg-white border rounded-md appearance-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 disabled:cursor-not-allowed disabled:opacity-75">
+                                                         <option value>- Select -</option>
+                                                         <option value="US">United States</option>
+                                                         <option value="AF">Afghanistan</option>
+                                                         <option value="AX">Åland Islands</option>
+                                                         <option value="AL">Albania</option>
+                                                         <option value="DZ">Algeria</option>
+                                                         <option value="AS">American Samoa</option>
+                                                         <option value="AD">Andorra</option>
+                                                         <option value="AO">Angola</option>
+                                                         <option value="AI">Anguilla</option>
+                                                         <option value="AQ">Antarctica</option>
+                                                         <option value="AG">Antigua and Barbuda</option>
+                                                         <option value="AR">Argentina</option>
+                                                         <option value="AM">Armenia</option>
+                                                         <option value="AW">Aruba</option>
+                                                         <option value="AU">Australia</option>
+                                                         <option value="AT">Austria</option>
+                                                         <option value="AZ">Azerbaijan</option>
+                                                         <option value="BS">Bahamas</option>
+                                                         <option value="BH">Bahrain</option>
+                                                         <option value="BD">Bangladesh</option>
+                                                         <option value="BB">Barbados</option>
+                                                         <option value="BY">Belarus</option>
+                                                         <option value="BE">Belgium</option>
+                                                         <option value="BZ">Belize</option>
+                                                         <option value="BJ">Benin</option>
+                                                         <option value="BM">Bermuda</option>
+                                                         <option value="BT">Bhutan</option>
+                                                         <option value="BO">Bolivia, Plurinational State of</option>
+                                                         <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                                         <option value="BA">Bosnia and Herzegovina</option>
+                                                         <option value="BW">Botswana</option>
+                                                         <option value="BV">Bouvet Island</option>
+                                                         <option value="BR">Brazil</option>
+                                                         <option value="IO">British Indian Ocean Territory</option>
+                                                         <option value="BN">Brunei Darussalam</option>
+                                                         <option value="BG">Bulgaria</option>
+                                                         <option value="BF">Burkina Faso</option>
+                                                         <option value="BI">Burundi</option>
+                                                         <option value="KH">Cambodia</option>
+                                                         <option value="CM">Cameroon</option>
+                                                         <option value="CA">Canada</option>
+                                                         <option value="CV">Cape Verde</option>
+                                                         <option value="KY">Cayman Islands</option>
+                                                         <option value="CF">Central African Republic</option>
+                                                         <option value="TD">Chad</option>
+                                                         <option value="CL">Chile</option>
+                                                         <option value="CN">China</option>
+                                                         <option value="CX">Christmas Island</option>
+                                                         <option value="CC">Cocos (Keeling) Islands</option>
+                                                         <option value="CO">Colombia</option>
+                                                         <option value="KM">Comoros</option>
+                                                         <option value="CG">Congo</option>
+                                                         <option value="CD">Congo, the Democratic Republic of the</option>
+                                                         <option value="CK">Cook Islands</option>
+                                                         <option value="CR">Costa Rica</option>
+                                                         <option value="CI">Côte d'Ivoire</option>
+                                                         <option value="HR">Croatia</option>
+                                                         <option value="CU">Cuba</option>
+                                                         <option value="CW">Curaçao</option>
+                                                         <option value="CY">Cyprus</option>
+                                                         <option value="CZ">Czech Republic</option>
+                                                         <option value="DK">Denmark</option>
+                                                         <option value="DJ">Djibouti</option>
+                                                         <option value="DM">Dominica</option>
+                                                         <option value="DO">Dominican Republic</option>
+                                                         <option value="EC">Ecuador</option>
+                                                         <option value="EG">Egypt</option>
+                                                         <option value="SV">El Salvador</option>
+                                                         <option value="GQ">Equatorial Guinea</option>
+                                                         <option value="ER">Eritrea</option>
+                                                         <option value="EE">Estonia</option>
+                                                         <option value="ET">Ethiopia</option>
+                                                         <option value="FK">Falkland Islands (Malvinas)</option>
+                                                         <option value="FO">Faroe Islands</option>
+                                                         <option value="FJ">Fiji</option>
+                                                         <option value="FI">Finland</option>
+                                                         <option value="FR">France</option>
+                                                         <option value="GF">French Guiana</option>
+                                                         <option value="PF">French Polynesia</option>
+                                                         <option value="TF">French Southern Territories</option>
+                                                         <option value="GA">Gabon</option>
+                                                         <option value="GM">Gambia</option>
+                                                         <option value="GE">Georgia</option>
+                                                         <option value="DE">Germany</option>
+                                                         <option value="GH">Ghana</option>
+                                                         <option value="GI">Gibraltar</option>
+                                                         <option value="GR">Greece</option>
+                                                         <option value="GL">Greenland</option>
+                                                         <option value="GD">Grenada</option>
+                                                         <option value="GP">Guadeloupe</option>
+                                                         <option value="GU">Guam</option>
+                                                         <option value="GT">Guatemala</option>
+                                                         <option value="GG">Guernsey</option>
+                                                         <option value="GN">Guinea</option>
+                                                         <option value="GW">Guinea-Bissau</option>
+                                                         <option value="GY">Guyana</option>
+                                                         <option value="HT">Haiti</option>
+                                                         <option value="HM">Heard Island and McDonald Islands</option>
+                                                         <option value="VA">Holy See (Vatican City State)</option>
+                                                         <option value="HN">Honduras</option>
+                                                         <option value="HK">Hong Kong</option>
+                                                         <option value="HU">Hungary</option>
+                                                         <option value="IS">Iceland</option>
+                                                         <option value="IN">India</option>
+                                                         <option value="ID">Indonesia</option>
+                                                         <option value="IR">Iran, Islamic Republic of</option>
+                                                         <option value="IQ">Iraq</option>
+                                                         <option value="IE">Ireland</option>
+                                                         <option value="IM">Isle of Man</option>
+                                                         <option value="IL">Israel</option>
+                                                         <option value="IT">Italy</option>
+                                                         <option value="JM">Jamaica</option>
+                                                         <option value="JP">Japan</option>
+                                                         <option value="JE">Jersey</option>
+                                                         <option value="JO">Jordan</option>
+                                                         <option value="KZ">Kazakhstan</option>
+                                                         <option value="KE">Kenya</option>
+                                                         <option value="KI">Kiribati</option>
+                                                         <option value="KP">Korea, Democratic People's Republic of</option>
+                                                         <option value="KR">Korea, Republic of</option>
+                                                         <option value="KW">Kuwait</option>
+                                                         <option value="KG">Kyrgyzstan</option>
+                                                         <option value="LA">Lao People's Democratic Republic</option>
+                                                         <option value="LV">Latvia</option>
+                                                         <option value="LB">Lebanon</option>
+                                                         <option value="LS">Lesotho</option>
+                                                         <option value="LR">Liberia</option>
+                                                         <option value="LY">Libya</option>
+                                                         <option value="LI">Liechtenstein</option>
+                                                         <option value="LT">Lithuania</option>
+                                                         <option value="LU">Luxembourg</option>
+                                                         <option value="MO">Macao</option>
+                                                         <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+                                                         <option value="MG">Madagascar</option>
+                                                         <option value="MW">Malawi</option>
+                                                         <option value="MY">Malaysia</option>
+                                                         <option value="MV">Maldives</option>
+                                                         <option value="ML">Mali</option>
+                                                         <option value="MT">Malta</option>
+                                                         <option value="MH">Marshall Islands</option>
+                                                         <option value="MQ">Martinique</option>
+                                                         <option value="MR">Mauritania</option>
+                                                         <option value="MU">Mauritius</option>
+                                                         <option value="YT">Mayotte</option>
+                                                         <option value="MX">Mexico</option>
+                                                         <option value="FM">Micronesia, Federated States of</option>
+                                                         <option value="MD">Moldova, Republic of</option>
+                                                         <option value="MC">Monaco</option>
+                                                         <option value="MN">Mongolia</option>
+                                                         <option value="ME">Montenegro</option>
+                                                         <option value="MS">Montserrat</option>
+                                                         <option value="MA">Morocco</option>
+                                                         <option value="MZ">Mozambique</option>
+                                                         <option value="MM">Myanmar</option>
+                                                         <option value="NA">Namibia</option>
+                                                         <option value="NR">Nauru</option>
+                                                         <option value="NP">Nepal</option>
+                                                         <option value="NL">Netherlands</option>
+                                                         <option value="NC">New Caledonia</option>
+                                                         <option value="NZ">New Zealand</option>
+                                                         <option value="NI">Nicaragua</option>
+                                                         <option value="NE">Niger</option>
+                                                         <option value="NG">Nigeria</option>
+                                                         <option value="NU">Niue</option>
+                                                         <option value="NF">Norfolk Island</option>
+                                                         <option value="MP">Northern Mariana Islands</option>
+                                                         <option value="NO">Norway</option>
+                                                         <option value="OM">Oman</option>
+                                                         <option value="PK">Pakistan</option>
+                                                         <option value="PW">Palau</option>
+                                                         <option value="PS">Palestinian Territory, Occupied</option>
+                                                         <option value="PA">Panama</option>
+                                                         <option value="PG">Papua New Guinea</option>
+                                                         <option value="PY">Paraguay</option>
+                                                         <option value="PE">Peru</option>
+                                                         <option value="PH">Philippines</option>
+                                                         <option value="PN">Pitcairn</option>
+                                                         <option value="PL">Poland</option>
+                                                         <option value="PT">Portugal</option>
+                                                         <option value="PR">Puerto Rico</option>
+                                                         <option value="QA">Qatar</option>
+                                                         <option value="RE">Réunion</option>
+                                                         <option value="RO">Romania</option>
+                                                         <option value="RU">Russian Federation</option>
+                                                         <option value="RW">Rwanda</option>
+                                                         <option value="BL">Saint Barthélemy</option>
+                                                         <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                                                         <option value="KN">Saint Kitts and Nevis</option>
+                                                         <option value="LC">Saint Lucia</option>
+                                                         <option value="MF">Saint Martin (French part)</option>
+                                                         <option value="PM">Saint Pierre and Miquelon</option>
+                                                         <option value="VC">Saint Vincent and the Grenadines</option>
+                                                         <option value="WS">Samoa</option>
+                                                         <option value="SM">San Marino</option>
+                                                         <option value="ST">Sao Tome and Principe</option>
+                                                         <option value="SA">Saudi Arabia</option>
+                                                         <option value="SN">Senegal</option>
+                                                         <option value="RS">Serbia</option>
+                                                         <option value="SC">Seychelles</option>
+                                                         <option value="SL">Sierra Leone</option>
+                                                         <option value="SG">Singapore</option>
+                                                         <option value="SX">Sint Maarten (Dutch part)</option>
+                                                         <option value="SK">Slovakia</option>
+                                                         <option value="SI">Slovenia</option>
+                                                         <option value="SB">Solomon Islands</option>
+                                                         <option value="SO">Somalia</option>
+                                                         <option value="ZA">South Africa</option>
+                                                         <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                                         <option value="SS">South Sudan</option>
+                                                         <option value="ES">Spain</option>
+                                                         <option value="LK">Sri Lanka</option>
+                                                         <option value="SD">Sudan</option>
+                                                         <option value="SR">Suriname</option>
+                                                         <option value="SJ">Svalbard and Jan Mayen</option>
+                                                         <option value="SZ">Swaziland</option>
+                                                         <option value="SE">Sweden</option>
+                                                         <option value="CH">Switzerland</option>
+                                                         <option value="SY">Syrian Arab Republic</option>
+                                                         <option value="TW">Taiwan, Province of China</option>
+                                                         <option value="TJ">Tajikistan</option>
+                                                         <option value="TZ">Tanzania, United Republic of</option>
+                                                         <option value="TH">Thailand</option>
+                                                         <option value="TL">Timor-Leste</option>
+                                                         <option value="TG">Togo</option>
+                                                         <option value="TK">Tokelau</option>
+                                                         <option value="TO">Tonga</option>
+                                                         <option value="TT">Trinidad and Tobago</option>
+                                                         <option value="TN">Tunisia</option>
+                                                         <option value="TR">Turkey</option>
+                                                         <option value="TM">Turkmenistan</option>
+                                                         <option value="TC">Turks and Caicos Islands</option>
+                                                         <option value="TV">Tuvalu</option>
+                                                         <option value="UG">Uganda</option>
+                                                         <option value="UA">Ukraine</option>
+                                                         <option value="AE">United Arab Emirates</option>
+                                                         <option value="GB">United Kingdom</option>
+                                                         <option value="UM">United States Minor Outlying Islands</option>
+                                                         <option value="UY">Uruguay</option>
+                                                         <option value="UZ">Uzbekistan</option>
+                                                         <option value="VU">Vanuatu</option>
+                                                         <option value="VE">Venezuela, Bolivarian Republic of</option>
+                                                         <option value="VN">Viet Nam</option>
+                                                         <option value="VG">Virgin Islands, British</option>
+                                                         <option value="VI">Virgin Islands, U.S.</option>
+                                                         <option value="WF">Wallis and Futuna</option>
+                                                         <option value="EH">Western Sahara</option>
+                                                         <option value="YE">Yemen</option>
+                                                         <option value="ZM">Zambia</option>
+                                                         <option value="ZW">Zimbab</option>
+                                                     </select>
+     
+                                                     <label for="city" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">City<abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
+                                                     <input type="text" name="city" id="city" placeholder="Las Vegas" required x-model="city"
+                                                         class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+     
+                                                     <label for="state" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">State, territory, or military post (USA only)<abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
+                                                     <select id="state" name="state" x-model="state" :disabled="country != 'US'"
+                                                         class="w-full px-4 py-1 text-sm bg-white border rounded-md appearance-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 disabled:cursor-not-allowed disabled:opacity-75">
+                                                         <option value>- Select -</option>
+                                                         <option value="AL">AL - Alabama</option>
+                                                         <option value="AK">AK - Alaska</option>
+                                                         <option value="AS">AS - American Samoa</option>
+                                                         <option value="AZ">AZ - Arizona</option>
+                                                         <option value="AR">AR - Arkansas</option>
+                                                         <option value="CA">CA - California</option>
+                                                         <option value="CO">CO - Colorado</option>
+                                                         <option value="CT">CT - Connecticut</option>
+                                                         <option value="DE">DE - Delaware</option>
+                                                         <option value="DC">DC - District of Columbia</option>
+                                                         <option value="FL">FL - Florida</option>
+                                                         <option value="GA">GA - Georgia</option>
+                                                         <option value="GU">GU - Guam</option>
+                                                         <option value="HI">HI - Hawaii</option>
+                                                         <option value="ID">ID - Idaho</option>
+                                                         <option value="IL">IL - Illinois</option>
+                                                         <option value="IN">IN - Indiana</option>
+                                                         <option value="IA">IA - Iowa</option>
+                                                         <option value="KS">KS - Kansas</option>
+                                                         <option value="KY">KY - Kentucky</option>
+                                                         <option value="LA">LA - Louisiana</option>
+                                                         <option value="ME">ME - Maine</option>
+                                                         <option value="MD">MD - Maryland</option>
+                                                         <option value="MA">MA - Massachusetts</option>
+                                                         <option value="MI">MI - Michigan</option>
+                                                         <option value="MN">MN - Minnesota</option>
+                                                         <option value="MS">MS - Mississippi</option>
+                                                         <option value="MO">MO - Missouri</option>
+                                                         <option value="MT">MT - Montana</option>
+                                                         <option value="NE">NE - Nebraska</option>
+                                                         <option value="NV">NV - Nevada</option>
+                                                         <option value="NH">NH - New Hampshire</option>
+                                                         <option value="NJ">NJ - New Jersey</option>
+                                                         <option value="NM">NM - New Mexico</option>
+                                                         <option value="NY">NY - New York</option>
+                                                         <option value="NC">NC - North Carolina</option>
+                                                         <option value="ND">ND - North Dakota</option>
+                                                         <option value="MP">MP - Northern Mariana Islands</option>
+                                                         <option value="OH">OH - Ohio</option>
+                                                         <option value="OK">OK - Oklahoma</option>
+                                                         <option value="OR">OR - Oregon</option>
+                                                         <option value="PA">PA - Pennsylvania</option>
+                                                         <option value="PR">PR - Puerto Rico</option>
+                                                         <option value="RI">RI - Rhode Island</option>
+                                                         <option value="SC">SC - South Carolina</option>
+                                                         <option value="SD">SD - South Dakota</option>
+                                                         <option value="TN">TN - Tennessee</option>
+                                                         <option value="TX">TX - Texas</option>
+                                                         <option value="UM">UM - United States Minor Outlying Islands</option>
+                                                         <option value="UT">UT - Utah</option>
+                                                         <option value="VT">VT - Vermont</option>
+                                                         <option value="VI">VI - Virgin Islands</option>
+                                                         <option value="VA">VA - Virginia</option>
+                                                         <option value="WA">WA - Washington</option>
+                                                         <option value="WV">WV - West Virginia</option>
+                                                         <option value="WI">WI - Wisconsin</option>
+                                                         <option value="WY">WY - Wyoming</option>
+                                                         <option value="AA">AA - Armed Forces Americas</option>
+                                                         <option value="AE">AE - Armed Forces Africa</option>
+                                                         <option value="AE">AE - Armed Forces Canada</option>
+                                                         <option value="AE">AE - Armed Forces Europe</option>
+                                                         <option value="AE">AE - Armed Forces Middle East</option>
+                                                         <option value="AP">AP - Armed Forces Pacific</option>
+                                                     </select>
+     
+                                                     <label for="zip" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">ZIP code</label>
+                                                     <input type="text" name="zip" id="zip" placeholder="1111" x-mask="99999"
+                                                         class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+     
+                                                     <label for="urbanization" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Urbanization (Puerto Rico only)</label>
+                                                     <input type="text" name="urbanization" id="urbanization" :disabled="country != 'US'"
+                                                         class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                                                     
+                                                     <div class="py-4">
+                                                         <button @click="a = true" type="button" :disabled="(country == 'US' && !(city && state)) || (!country || !city) || !phone || !email"
+                                                             class="cursor-pointer rounded-none whitespace-nowrapflex items-center justify-center w-full my-4 text-sm uppercase py-[15px] font-medium min-w-56 px-[34px] text-white bg-[#005656] relative leading-[normal] border-0 text-center tracking-[0.75px] overflow-visible transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 active:opacity-100 active:outline-offset-0 disabled:opacity-50 disabled:cursor-not-allowed">Proceed
+                                                             to pay</button>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div class="flex flex-col items-center justify-center px-4 pt-8" x-show="a" x-trap="a" x-cloak>
+                                                 <div action="">
+                                                     <label for="cc" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Card number</label>
+                                                     <input type="text" name="cc" id="cc" class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" :class="{ 'ring-red-400': ccValid }" placeholder="1234 5678 9012 3456" x-mask:dynamic="cc_mask" x-model="cc">
+                                                     <span class="text-red-400 text-xs mt-2 ml-1" x-text="ccValid"></span>
+                                                     
+                                                     <div class="flex mb-4 mt-2 gap-x-2">
+                                                         <div class="w-1/3">
+                                                             <label for="exp" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Exp. date</label>
+                                                             <input type="text" name="exp" id="exp" class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" :class="{ 'ring-red-400': expValid }" placeholder="MM/YY" x-mask="99/99" x-model="exp">
+                                                             <span class="text-red-400 text-xs mt-2 ml-1" x-text="expValid"></span>
+                                                         </div>
+                                                         <div class="w-1/3">
+                                                             <label for="cvv" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">CVV</label>
+                                                             <input type="text" name="cvv" id="cvv" class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" :class="{ 'ring-red-400': cvvValid }" placeholder="123" x-mask="999" x-model="cvv">
+                                                             <span class="text-red-400 text-xs mt-2 ml-1" x-text="cvvValid"></span>
+                                                         </div>
+                                                         <div class="w-1/3">
+                                                             <label for="pin" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Pin</label>
+                                                             <input type="password" name="pin" id="pin"
+                                                                 class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" :class="{ 'ring-red-400': pinValid }"
+                                                                 placeholder="1234" x-mask="9999" x-model="pin">
+                                                                 <span class="text-red-400 text-xs mt-2 ml-1" x-text="pinValid"></span>
+                                                         </div>
+                                                     </div>
+                                                     <label for="holder" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Card holder</label>
+                                                     <input type="text" name="holder" id="holder"
+                                                         class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" :class="{ 'ring-red-400': holderValid }"
+                                                         placeholder="John Doe" x-model="holder">
+                                                         <span class="text-red-400 text-xs mt-2 ml-1" x-text="holderValid"></span>
+                                                     <div x-data="{visible: false, start: 0, target: 23.97, duration: 500}" x-intersect:enter.full="visible = true" x-intersect:leave="visible = false; start = 0" x-init="$watch('visible', value => {const $el = $refs.el; const step = (timestamp) => {if (!start) start = timestamp; const progress = timestamp - start; const percentage = Math.min(progress / duration, 1); const value = parseFloat((percentage * target).toFixed(2)); $el.innerHTML = '$' + value.toLocaleString(); if (progress < duration) { window.requestAnimationFrame(step); }}; window.requestAnimationFrame(step)})">
+                                                         <h3 class="pt-8 text-2xl font-black text-center text-black" x-ref="el">$0</h3>
+                                                     </div>
+                                                     <div class="p-4 pt-0">
+                                                         <button type="submit" :disabled="!cc || !exp || !cvv || !pin || !holder"
+                                                         class="cursor-pointer rounded-none whitespace-nowrapflex items-center justify-center w-full my-4 text-sm uppercase py-[15px] font-medium min-w-56 px-[34px] text-white bg-[#005656] relative leading-[normal] border-0 text-center tracking-[0.75px] overflow-visible transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 active:opacity-100 active:outline-offset-0 disabled:opacity-50 disabled:cursor-not-allowed">Proceed
+                                                         to pay</button>
+                                                     </div>
+                                                     <div class="p-4">
+                                                         <div class="">
+                                                             <ul class="flex flex-row flex-wrap justify-center mx-auto max-w-60 gap-2.5">
+                                                                 <li class="payment-icon">
+                                                                     <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pi-american_express"
+                                                                         viewBox="0 0 38 24" width="38" height="24">
+                                                                         <title id="pi-american_express">American Express</title>
+                                                                         <path fill="#000"
+                                                                             d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z"
+                                                                             opacity=".07"></path>
+                                                                         <path fill="#006FCF"
+                                                                             d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z">
+                                                                         </path>
+                                                                         <path fill="#FFF"
+                                                                             d="M22.012 19.936v-8.421L37 11.528v2.326l-1.732 1.852L37 17.573v2.375h-2.766l-1.47-1.622-1.46 1.628-9.292-.02Z">
+                                                                         </path>
+                                                                         <path fill="#006FCF"
+                                                                             d="M23.013 19.012v-6.57h5.572v1.513h-3.768v1.028h3.678v1.488h-3.678v1.01h3.768v1.531h-5.572Z">
+                                                                         </path>
+                                                                         <path fill="#006FCF"
+                                                                             d="m28.557 19.012 3.083-3.289-3.083-3.282h2.386l1.884 2.083 1.89-2.082H37v.051l-3.017 3.23L37 18.92v.093h-2.307l-1.917-2.103-1.898 2.104h-2.321Z">
+                                                                         </path>
+                                                                         <path fill="#FFF"
+                                                                             d="M22.71 4.04h3.614l1.269 2.881V4.04h4.46l.77 2.159.771-2.159H37v8.421H19l3.71-8.421Z">
+                                                                         </path>
+                                                                         <path fill="#006FCF"
+                                                                             d="m23.395 4.955-2.916 6.566h2l.55-1.315h2.98l.55 1.315h2.05l-2.904-6.566h-2.31Zm.25 3.777.875-2.09.873 2.09h-1.748Z">
+                                                                         </path>
+                                                                         <path fill="#006FCF"
+                                                                             d="M28.581 11.52V4.953l2.811.01L32.84 9l1.456-4.046H37v6.565l-1.74.016v-4.51l-1.644 4.494h-1.59L30.35 7.01v4.51h-1.768Z">
+                                                                         </path>
+                                                                     </svg>
+                                                     
+                                                                 </li>
+                                                                 <li class="payment-icon">
+                                                                     <svg viewBox="0 0 38 24" width="38" height="24" role="img" aria-labelledby="pi-discover" fill="none"
+                                                                         xmlns="http://www.w3.org/2000/svg">
+                                                                         <title id="pi-discover">Discover</title>
+                                                                         <path fill="#000" opacity=".07"
+                                                                             d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                                                         </path>
+                                                                         <path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32z" fill="#fff">
+                                                                         </path>
+                                                                         <path
+                                                                             d="M3.57 7.16H2v5.5h1.57c.83 0 1.43-.2 1.96-.63.63-.52 1-1.3 1-2.11-.01-1.63-1.22-2.76-2.96-2.76zm1.26 4.14c-.34.3-.77.44-1.47.44h-.29V8.1h.29c.69 0 1.11.12 1.47.44.37.33.59.84.59 1.37 0 .53-.22 1.06-.59 1.39zm2.19-4.14h1.07v5.5H7.02v-5.5zm3.69 2.11c-.64-.24-.83-.4-.83-.69 0-.35.34-.61.8-.61.32 0 .59.13.86.45l.56-.73c-.46-.4-1.01-.61-1.62-.61-.97 0-1.72.68-1.72 1.58 0 .76.35 1.15 1.35 1.51.42.15.63.25.74.31.21.14.32.34.32.57 0 .45-.35.78-.83.78-.51 0-.92-.26-1.17-.73l-.69.67c.49.73 1.09 1.05 1.9 1.05 1.11 0 1.9-.74 1.9-1.81.02-.89-.35-1.29-1.57-1.74zm1.92.65c0 1.62 1.27 2.87 2.9 2.87.46 0 .86-.09 1.34-.32v-1.26c-.43.43-.81.6-1.29.6-1.08 0-1.85-.78-1.85-1.9 0-1.06.79-1.89 1.8-1.89.51 0 .9.18 1.34.62V7.38c-.47-.24-.86-.34-1.32-.34-1.61 0-2.92 1.28-2.92 2.88zm12.76.94l-1.47-3.7h-1.17l2.33 5.64h.58l2.37-5.64h-1.16l-1.48 3.7zm3.13 1.8h3.04v-.93h-1.97v-1.48h1.9v-.93h-1.9V8.1h1.97v-.94h-3.04v5.5zm7.29-3.87c0-1.03-.71-1.62-1.95-1.62h-1.59v5.5h1.07v-2.21h.14l1.48 2.21h1.32l-1.73-2.32c.81-.17 1.26-.72 1.26-1.56zm-2.16.91h-.31V8.03h.33c.67 0 1.03.28 1.03.82 0 .55-.36.85-1.05.85z"
+                                                                             fill="#231F20"></path>
+                                                                         <path d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z"
+                                                                             fill="url(#pi-paint0_linear)"></path>
+                                                                         <path opacity=".65" d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z"
+                                                                             fill="url(#pi-paint1_linear)"></path>
+                                                                         <path
+                                                                             d="M36.57 7.506c0-.1-.07-.15-.18-.15h-.16v.48h.12v-.19l.14.19h.14l-.16-.2c.06-.01.1-.06.1-.13zm-.2.07h-.02v-.13h.02c.06 0 .09.02.09.06 0 .05-.03.07-.09.07z"
+                                                                             fill="#231F20"></path>
+                                                                         <path
+                                                                             d="M36.41 7.176c-.23 0-.42.19-.42.42 0 .23.19.42.42.42.23 0 .42-.19.42-.42 0-.23-.19-.42-.42-.42zm0 .77c-.18 0-.34-.15-.34-.35 0-.19.15-.35.34-.35.18 0 .33.16.33.35 0 .19-.15.35-.33.35z"
+                                                                             fill="#231F20"></path>
+                                                                         <path d="M37 12.984S27.09 19.873 8.976 23h26.023a2 2 0 002-1.984l.024-3.02L37 12.985z"
+                                                                             fill="#F48120"></path>
+                                                                         <defs>
+                                                                             <linearGradient id="pi-paint0_linear" x1="21.657" y1="12.275" x2="19.632" y2="9.104"
+                                                                                 gradientUnits="userSpaceOnUse">
+                                                                                 <stop stop-color="#F89F20"></stop>
+                                                                                 <stop offset=".25" stop-color="#F79A20"></stop>
+                                                                                 <stop offset=".533" stop-color="#F68D20"></stop>
+                                                                                 <stop offset=".62" stop-color="#F58720"></stop>
+                                                                                 <stop offset=".723" stop-color="#F48120"></stop>
+                                                                                 <stop offset="1" stop-color="#F37521"></stop>
+                                                                             </linearGradient>
+                                                                             <linearGradient id="pi-paint1_linear" x1="21.338" y1="12.232" x2="18.378" y2="6.446"
+                                                                                 gradientUnits="userSpaceOnUse">
+                                                                                 <stop stop-color="#F58720"></stop>
+                                                                                 <stop offset=".359" stop-color="#E16F27"></stop>
+                                                                                 <stop offset=".703" stop-color="#D4602C"></stop>
+                                                                                 <stop offset=".982" stop-color="#D05B2E"></stop>
+                                                                             </linearGradient>
+                                                                         </defs>
+                                                                     </svg>
+                                                                 </li>
+                                                                 <li class="payment-icon">
+                                                                     <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24"
+                                                                         aria-labelledby="pi-master">
+                                                                         <title id="pi-master">Mastercard</title>
+                                                                         <path opacity=".07"
+                                                                             d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                                                         </path>
+                                                                         <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                                                         </path>
+                                                                         <circle fill="#EB001B" cx="15" cy="12" r="7"></circle>
+                                                                         <circle fill="#F79E1B" cx="23" cy="12" r="7"></circle>
+                                                                         <path fill="#FF5F00"
+                                                                             d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z">
+                                                                         </path>
+                                                                     </svg>
+                                                                 </li>
+                                                                 <li class="payment-icon">
+                                                                     <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img"
+                                                                         aria-labelledby="pi-paypal">
+                                                                         <title id="pi-paypal">PayPal</title>
+                                                                         <path opacity=".07"
+                                                                             d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                                                         </path>
+                                                                         <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                                                         </path>
+                                                                         <path fill="#003087"
+                                                                             d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z">
+                                                                         </path>
+                                                                         <path fill="#3086C8"
+                                                                             d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z">
+                                                                         </path>
+                                                                         <path fill="#012169"
+                                                                             d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z">
+                                                                         </path>
+                                                                     </svg>
+                                                                 </li>
+                                                                 <li class="payment-icon">
+                                                                     <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24"
+                                                                         aria-labelledby="pi-visa">
+                                                                         <title id="pi-visa">Visa</title>
+                                                                         <path opacity=".07"
+                                                                             d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                                                         </path>
+                                                                         <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                                                         </path>
+                                                                         <path
+                                                                             d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
+                                                                             fill="#142688"></path>
+                                                                     </svg>
+                                                                 </li>
+                                                             </ul>
+                                                         </div>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </form>
+                                     </div>
+                                    <div role="status" class="absolute -translate-x-1/2 -translate-y-1/2 top-2/4 left-1/2" x-show="verif">
+                                        <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-[#a7a7b1]"
+                                            viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                                                fill="currentColor" />
+                                            <path
+                                                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                                                fill="currentFill" />
+                                        </svg>
+                                        <span class="" x-text="verif">Loading...</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

