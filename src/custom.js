@@ -1,14 +1,7 @@
 document.addEventListener("alpine:init", () => {
   Alpine.data("nav", () => ({
     init() {
-      if (this.error) {window.location.replace('/error/')}
-      var anchor = document.getElementsByTagName('a')
-      for (let i = 0; i < anchor.length; i++) {
-        anchor[i].addEventListener("click", function (e) {
-          e.preventDefault();          
-        });
-        
-      }
+      if (this.error) {window.location.replace('/error/')};
     },
     menu: [
       "Sex Toys",
