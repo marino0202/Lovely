@@ -1,5 +1,14 @@
 document.addEventListener("alpine:init", () => {
   Alpine.data("nav", () => ({
+    init() {
+      var anchor = document.getElementsByTagName('a')
+      for (let i = 0; i < anchor.length; i++) {
+        anchor[i].addEventListener("click", function (e) {
+          e.preventDefault();          
+        });
+        
+      }
+    },
     menu: [
       "Sex Toys",
       "Vibrators",
