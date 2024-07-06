@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="src/tailwind.css">
     <script src="src/alpine.js" defer></script>
 </head>
-<body x-data>
+<body x-data @load="error = true">
     <section class="bg-white dark:bg-gray-900 h-screen">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="mx-auto max-w-screen-sm text-center">

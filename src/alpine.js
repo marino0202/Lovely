@@ -1303,6 +1303,85 @@ var module_default = src_default;
 
 /***/ }),
 
+/***/ "./node_modules/@alpinejs/persist/dist/module.esm.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@alpinejs/persist/dist/module.esm.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ module_default),
+/* harmony export */   persist: () => (/* binding */ src_default)
+/* harmony export */ });
+// packages/persist/src/index.js
+function src_default(Alpine) {
+  let persist = () => {
+    let alias;
+    let storage;
+    try {
+      storage = localStorage;
+    } catch (e) {
+      console.error(e);
+      console.warn("Alpine: $persist is using temporary storage since localStorage is unavailable.");
+      let dummy = /* @__PURE__ */ new Map();
+      storage = {
+        getItem: dummy.get.bind(dummy),
+        setItem: dummy.set.bind(dummy)
+      };
+    }
+    return Alpine.interceptor((initialValue, getter, setter, path, key) => {
+      let lookup = alias || `_x_${path}`;
+      let initial = storageHas(lookup, storage) ? storageGet(lookup, storage) : initialValue;
+      setter(initial);
+      Alpine.effect(() => {
+        let value = getter();
+        storageSet(lookup, value, storage);
+        setter(value);
+      });
+      return initial;
+    }, (func) => {
+      func.as = (key) => {
+        alias = key;
+        return func;
+      }, func.using = (target) => {
+        storage = target;
+        return func;
+      };
+    });
+  };
+  Object.defineProperty(Alpine, "$persist", { get: () => persist() });
+  Alpine.magic("persist", persist);
+  Alpine.persist = (key, { get, set }, storage = localStorage) => {
+    let initial = storageHas(key, storage) ? storageGet(key, storage) : get();
+    set(initial);
+    Alpine.effect(() => {
+      let value = get();
+      storageSet(key, value, storage);
+      set(value);
+    });
+  };
+}
+function storageHas(key, storage) {
+  return storage.getItem(key) !== null;
+}
+function storageGet(key, storage) {
+  let value = storage.getItem(key, storage);
+  if (value === void 0)
+    return;
+  return JSON.parse(value);
+}
+function storageSet(key, value, storage) {
+  storage.setItem(key, JSON.stringify(value));
+}
+
+// packages/persist/builds/module.js
+var module_default = src_default;
+
+
+
+/***/ }),
+
 /***/ "./node_modules/@victoryoalli/alpinejs-moment/dist/moment.esm.js":
 /*!***********************************************************************!*\
   !*** ./node_modules/@victoryoalli/alpinejs-moment/dist/moment.esm.js ***!
@@ -8553,8 +8632,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _alpinejs_focus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @alpinejs/focus */ "./node_modules/@alpinejs/focus/dist/module.esm.js");
 /* harmony import */ var _alpinejs_mask__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @alpinejs/mask */ "./node_modules/@alpinejs/mask/dist/module.esm.js");
 /* harmony import */ var _alpinejs_intersect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @alpinejs/intersect */ "./node_modules/@alpinejs/intersect/dist/module.esm.js");
-/* harmony import */ var _victoryoalli_alpinejs_timeout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @victoryoalli/alpinejs-timeout */ "./node_modules/@victoryoalli/alpinejs-timeout/dist/timeout.esm.js");
-/* harmony import */ var _victoryoalli_alpinejs_moment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @victoryoalli/alpinejs-moment */ "./node_modules/@victoryoalli/alpinejs-moment/dist/moment.esm.js");
+/* harmony import */ var _alpinejs_persist__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @alpinejs/persist */ "./node_modules/@alpinejs/persist/dist/module.esm.js");
+/* harmony import */ var _victoryoalli_alpinejs_timeout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @victoryoalli/alpinejs-timeout */ "./node_modules/@victoryoalli/alpinejs-timeout/dist/timeout.esm.js");
+/* harmony import */ var _victoryoalli_alpinejs_moment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @victoryoalli/alpinejs-moment */ "./node_modules/@victoryoalli/alpinejs-moment/dist/moment.esm.js");
+
 
 
 
@@ -8565,8 +8646,9 @@ window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].plugin(_alpinejs_focus__WEBPACK_IMPORTED_MODULE_1__["default"]);
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].plugin(_alpinejs_mask__WEBPACK_IMPORTED_MODULE_2__["default"]);
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].plugin(_alpinejs_intersect__WEBPACK_IMPORTED_MODULE_3__["default"]);
-alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].plugin(_victoryoalli_alpinejs_timeout__WEBPACK_IMPORTED_MODULE_4__["default"]);
-alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].plugin(_victoryoalli_alpinejs_moment__WEBPACK_IMPORTED_MODULE_5__["default"]);
+alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].plugin(_alpinejs_persist__WEBPACK_IMPORTED_MODULE_4__["default"]);
+alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].plugin(_victoryoalli_alpinejs_timeout__WEBPACK_IMPORTED_MODULE_5__["default"]);
+alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].plugin(_victoryoalli_alpinejs_moment__WEBPACK_IMPORTED_MODULE_6__["default"]);
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 })();
 
