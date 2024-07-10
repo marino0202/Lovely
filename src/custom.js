@@ -32,7 +32,7 @@ document.addEventListener("alpine:init", () => {
       "./src/assets/image/Lovers_Water_Based_Lube_Foil_10ml_OAL_250x250.avif",
       // "./src/assets/image/Pipedream_King_Cock_Clear_18in_Double_Dildo_250x250.webp:62",
     ],
-    price: ["16.97", "2.95"],
+    price: ["14.97", "2.95"],
   }));
   Alpine.data("slide", () => ({
     num: 0,
