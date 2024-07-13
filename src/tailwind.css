@@ -1343,6 +1343,10 @@ a {
   overflow: visible;
 }
 
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -2185,6 +2189,15 @@ a {
 .content-none {
   --tw-content: none;
   content: var(--tw-content);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
 }
 
 @font-face {

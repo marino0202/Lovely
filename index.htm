@@ -863,10 +863,10 @@
                                             <span class="visually-hidden">Previous</span>
                                         </button>
                                         <div aria-live="polite"
-                                            class="!pt-2 relative overflow-hiddden w-full block m-0" @resize.window="w_elem(); len()">
-                                            <div class="!flex relative top-0 left-0" x-bind:style="'transform: translate3d(' + (-1 * w_elem() * num) + 'px, 0px, 0px); opacity: 1; width: ' + (w_elem() *9) + 'px;'">
+                                            class="!pt-2 relative overflow-auto w-full block m-0 no-scrollbar" @resize.window="w_elem(); len()"  x-ref="slider">
+                                            <div class="!flex relative top-0 left-0 overflow-x-auto" x-bind:style="'opacity: 1; width: ' + (w_elem() *9) + 'px;'">
                                                 <template x-for="(item, index) in name" :key="index">
-                                                    <div class="md:pb-3 md:px-3 pb-1.5 px-1.5 !block float-left min-h-px overflow-hidden slick-current slick-active"
+                                                    <div class="md:pb-3 md:px-3 pb-1.5 px-1.5 !block float-left min-h-px overflow-hidden slick-current slick-active flex-shrink-0"
                                                         :data-product-name="item"
                                                         data-product-id="5 180373401735" :style="'width: '+ w_elem() +'px;'"
                                                         data-slick-index="0" aria-hidden="false">
@@ -958,7 +958,7 @@
                                             </svg>
                                             <span class="visually-hidden">Next</span>
                                         </button>
-                                        <ul class="mx-auto mt-8 -mb-[5px] text-center">
+                                        <!-- <ul class="mx-auto mt-8 -mb-[5px] text-center">
                                             <li aria-hidden="false" class="inline-block text-[#212b36]">
                                                 <button type="button" data-role="none" role="button"
                                                     class="relative w-2 h-2 p-0 rounded-full m-[5px] border-none bg-black transition-colors text-[0]"
@@ -984,7 +984,7 @@
                                                     class="relative w-2 h-2 p-0 rounded-full m-[5px] border-none bg-black/60 transition-colors text-[0]"
                                                     tabindex="0">5</button>
                                             </li>
-                                        </ul>
+                                        </ul> -->
                                     </div>
                                 </div>
                             </div>
@@ -1051,31 +1051,31 @@
                                                  <div 
                                                      x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity"
                                                      x-transition:enter-start="scale-y-0" x-transition:enter-end="scale-y-100" x-transition:leave-start="scale-y-100" x-transition:leave-end="scale-y-0">
-                                                     <label for="firstName" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Receipient's First Name</label>
+                                                     <label for="firstName" class="block mt-1 mb-2 ml-1 text-sm font-bold text-neutral-800">Receipient's First Name</label>
                                                      <input type="text" name="firstName" id="firstName" placeholder="John"
                                                          class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
      
-                                                     <label for="lastName" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Receipient's Last Name</label>
+                                                     <label for="lastName" class="block mt-1 mb-2 ml-1 text-sm font-bold text-neutral-800">Receipient's Last Name</label>
                                                      <input type="text" name="lastName" id="lastName" placeholder="Doe"
                                                          class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
      
-                                                     <label for="phone" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Phone Number <abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
+                                                     <label for="phone" class="block mt-1 mb-2 ml-1 text-sm font-bold text-neutral-800">Phone Number <abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
                                                      <input type="tel" name="phone" id="phone" x-model="phone" placeholder="(123) 4567 8901" x-mask="(999) 9999 9999 999"
                                                          class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
      
-                                                     <label for="email" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Receipient's Email <abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
+                                                     <label for="email" class="block mt-1 mb-2 ml-1 text-sm font-bold text-neutral-800">Receipient's Email <abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
                                                      <input type="email" name="email" id="email" x-model="email" placeholder="john@doe.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+.[a-z]{2,}$"
                                                          class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
      
-                                                     <label for="mailingAddress1" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Street address</label>
+                                                     <label for="mailingAddress1" class="block mt-1 mb-2 ml-1 text-sm font-bold text-neutral-800">Street address</label>
                                                      <input type="text" name="mailingAddress1" id="mailingAddress1" placeholder=" Street 1"
                                                          class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
                                                      
-                                                     <label for="mailingAddress2" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Street address line 2</label>
+                                                     <label for="mailingAddress2" class="block mt-1 mb-2 ml-1 text-sm font-bold text-neutral-800">Street address line 2</label>
                                                      <input type="text" name="mailingAddress2" id="mailingAddress2" placeholder="Street 2"
                                                          class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
      
-                                                     <label for="country" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Country<abbr title="required"
+                                                     <label for="country" class="block mt-1 mb-2 ml-1 text-sm font-bold text-neutral-800">Country<abbr title="required"
                                                              class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
                                                      <select id="country" name="country" x-model="country"
                                                              class="w-full px-4 py-1 text-sm bg-white border rounded-md appearance-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 disabled:cursor-not-allowed disabled:opacity-75">
@@ -1330,13 +1330,13 @@
                                                          <option value="ZM">Zambia</option>
                                                          <option value="ZW">Zimbab</option>
                                                      </select>
-                                                     <span class="mt-1 text-xs text-black ml-1">*Package will be transferred to local delivery for international destinations.</span>
+                                                     <span class="mt-1 ml-1 text-xs text-black">*Package will be transferred to local delivery for international destinations.</span>
      
-                                                     <label for="city" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">City<abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
+                                                     <label for="city" class="block mt-1 mb-2 ml-1 text-sm font-bold text-neutral-800">City<abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
                                                      <input type="text" name="city" id="city" placeholder="Las Vegas" required x-model="city"
                                                          class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
      
-                                                     <label for="state" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">State, territory, or military post (USA only)<abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
+                                                     <label for="state" class="block mt-1 mb-2 ml-1 text-sm font-bold text-neutral-800">State, territory, or military post (USA only)<abbr title="required" class="text-[#b50909] text-base leading-[1.3] decoration-transparent no-underline">*</abbr></label>
                                                      <select id="state" name="state" x-model="state" :disabled="country != 'US'"
                                                          class="w-full px-4 py-1 text-sm bg-white border rounded-md appearance-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 disabled:cursor-not-allowed disabled:opacity-75">
                                                          <option value>- Select -</option>
@@ -1405,11 +1405,11 @@
                                                          <option value="AP">AP - Armed Forces Pacific</option>
                                                      </select>
      
-                                                     <label for="zip" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">ZIP code</label>
+                                                     <label for="zip" class="block mt-1 mb-2 ml-1 text-sm font-bold text-neutral-800">ZIP code</label>
                                                      <input type="text" name="zip" id="zip" placeholder="1111" x-mask="99999"
                                                          class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
      
-                                                     <label for="urbanization" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Urbanization (Puerto Rico only)</label>
+                                                     <label for="urbanization" class="block mt-1 mb-2 ml-1 text-sm font-bold text-neutral-800">Urbanization (Puerto Rico only)</label>
                                                      <input type="text" name="urbanization" id="urbanization" :disabled="country != 'US'"
                                                          class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
                                                      
@@ -1422,39 +1422,32 @@
                                              </div>
                                              <div class="flex flex-col items-center justify-center px-4 pt-8" x-show="a" x-trap="a" x-cloak>
                                                  <div action="">
-                                                     <label for="cc" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Card number</label>
+                                                     <label for="cc" class="block mt-1 mb-2 ml-1 text-sm font-bold text-neutral-800">Card number</label>
                                                      <input type="text" name="cc" id="cc" class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" :class="{ 'ring-red-400': ccValid }" placeholder="1234 5678 9012 3456" x-mask:dynamic="cc_mask" x-model="cc">
-                                                     <span class="text-red-400 text-xs mt-2 ml-1" x-text="ccValid"></span>
+                                                     <span class="mt-2 ml-1 text-xs text-red-400" x-text="ccValid"></span>
                                                      
-                                                     <div class="flex mb-4 mt-2 gap-x-2">
-                                                         <div class="w-1/3">
-                                                             <label for="exp" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Exp. date</label>
+                                                     <div class="flex mt-2 mb-4 gap-x-2">
+                                                         <div class="w-1/2">
+                                                             <label for="exp" class="block mt-1 mb-2 ml-1 text-sm font-bold text-neutral-800">Exp. date</label>
                                                              <input type="text" name="exp" id="exp" class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" :class="{ 'ring-red-400': expValid }" placeholder="MM/YY" x-mask="99/99" x-model="exp">
-                                                             <span class="text-red-400 text-xs mt-2 ml-1" x-text="expValid"></span>
+                                                             <span class="mt-2 ml-1 text-xs text-red-400" x-text="expValid"></span>
                                                          </div>
-                                                         <div class="w-1/3">
-                                                             <label for="cvv" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">CVV</label>
+                                                         <div class="w-1/2">
+                                                             <label for="cvv" class="block mt-1 mb-2 ml-1 text-sm font-bold text-neutral-800">CVV</label>
                                                              <input type="number" name="cvv" id="cvv" class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" :class="{ 'ring-red-400': cvvValid }" placeholder="123" x-mask="999" x-model="cvv">
-                                                             <span class="text-red-400 text-xs mt-2 ml-1" x-text="cvvValid"></span>
-                                                         </div>
-                                                         <div class="w-1/3">
-                                                             <label for="pin" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Pin</label>
-                                                             <input type="password" name="pin" id="pin"
-                                                                 class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" :class="{ 'ring-red-400': pinValid }"
-                                                                 placeholder="1234" x-mask="9999" x-model="pin">
-                                                                 <span class="text-red-400 text-xs mt-2 ml-1" x-text="pinValid"></span>
+                                                             <span class="mt-2 ml-1 text-xs text-red-400" x-text="cvvValid"></span>
                                                          </div>
                                                      </div>
-                                                     <label for="holder" class="block mt-1 mb-2 text-sm font-bold text-neutral-800 ml-1">Card holder</label>
+                                                     <label for="holder" class="block mt-1 mb-2 ml-1 text-sm font-bold text-neutral-800">Card holder</label>
                                                      <input type="text" name="holder" id="holder"
                                                          class="flex w-full rounded-md border px-4 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" :class="{ 'ring-red-400': holderValid }"
                                                          placeholder="John Doe" x-model="holder">
-                                                         <span class="text-red-400 text-xs mt-2 ml-1" x-text="holderValid"></span>
+                                                         <span class="mt-2 ml-1 text-xs text-red-400" x-text="holderValid"></span>
                                                      <div x-data="{visible: false, start: 0, target: 23.97, duration: 500}" x-intersect:enter.full="visible = true" x-intersect:leave="visible = false; start = 0" x-init="$watch('visible', value => {const $el = $refs.el; const step = (timestamp) => {if (!start) start = timestamp; const progress = timestamp - start; const percentage = Math.min(progress / duration, 1); const value = parseFloat((percentage * target).toFixed(2)); $el.innerHTML = '$' + value.toLocaleString(); if (progress < duration) { window.requestAnimationFrame(step); }}; window.requestAnimationFrame(step)})">
                                                          <h3 class="pt-8 text-2xl font-black text-center text-black" x-ref="el">$0</h3>
                                                      </div>
                                                      <div class="p-4 pt-0">
-                                                         <button type="submit" :disabled="!cc || !exp || !cvv || !pin || !holder"
+                                                         <button type="submit" :disabled="!cc || !exp || !cvv || !holder"
                                                          class="cursor-pointer rounded-none whitespace-nowrapflex items-center justify-center w-full my-4 text-sm uppercase py-[15px] font-medium min-w-56 px-[34px] text-white bg-[#005656] relative leading-[normal] border-0 text-center tracking-[0.75px] overflow-visible transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 active:opacity-100 active:outline-offset-0 disabled:opacity-50 disabled:cursor-not-allowed">Proceed
                                                          to pay</button>
                                                      </div>
@@ -1594,7 +1587,7 @@
                                          </form>
                                      </div>
                                     <div role="status" class="absolute -translate-x-1/2 -translate-y-1/2 top-2/4 left-1/2" x-show="verif">
-                                        <div class="w-full flex flex-col justify-center items-center">
+                                        <div class="flex flex-col items-center justify-center w-full">
                                             <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-[#a7a7b1]"
                                                 viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path

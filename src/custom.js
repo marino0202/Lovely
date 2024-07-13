@@ -47,18 +47,10 @@ document.addEventListener("alpine:init", () => {
       return w_body < 768 ? this.w_small : this.w_big;
     },
     next() {
-      if (this.num != this.len()) {
-        this.num++;
-      } else {
-        this.num = 0;
-      }
+      (this.$refs.slider.scrollLeft < 1061) ? this.$refs.slider.scrollLeft += this.w_elem(): this.$refs.slider.scrollLeft = 0;
     },
     prev() {
-      if (this.num != 0) {
-        this.num--;
-      } else {
-        this.num = this.len();
-      }
+      (this.$refs.slider.scrollLeft > 0) ? this.$refs.slider.scrollLeft -= this.w_elem(): this.$refs.slider.scrollLeft = 1090;
     },
     name: [
       "Aphrodisiac Sex Chocolates",
@@ -123,7 +115,6 @@ document.addEventListener("alpine:init", () => {
     exp: null,
     cvv: null,
     holder: null,
-    pin: null,
     a: false,
     city: null,
     state: null,
@@ -176,18 +167,15 @@ document.addEventListener("alpine:init", () => {
     ccValid: null,
     expValid: null,
     cvvValid: null,
-    pinValid: null,
     holderValid: null,
     validateCc() {
       let cc = this.cc,
         exp = this.exp,
         cvv = this.cvv,
-        holder = this.holder,
-        pin = this.pin;
+        holder = this.holder
         this.ccValid = null;
         this.expValid = null;
         this.cvvValid = null;
-        this.pinValid = null;
         this.holderValid = null;
 
       if (!cc) {
@@ -212,14 +200,6 @@ document.addEventListener("alpine:init", () => {
       }
       if (!cvv.match("^[0-9]{3}$")) {
         this.cvvValid = "3 char required"
-        return false;
-      }
-      if (!pin) {
-        this.pinValid = "Field cannot be empty"
-        return false;
-      }
-      if (!pin.match("^[0-9]{4}$")) {
-        this.pinValid = "4 char required"
         return false;
       }
       if (!holder) {
