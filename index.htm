@@ -37,6 +37,11 @@
     -->
     <script src="./src/custom.js" defer></script>
     <script src="./src/alpine.js" defer></script>
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <link rel="stylesheet" href="./src/tailwind.css">
     <style>
         [x-cloak] {
@@ -2227,6 +2232,14 @@
             </div>
         </div>
     </section>
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            utilsScript:
+                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+        phoneInputField.parentNode.classList.add("w-full");
+    </script>
 </body>
 
 </html>
