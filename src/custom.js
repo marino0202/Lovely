@@ -23,7 +23,7 @@ document.addEventListener("alpine:init", () => {
   }));
   Alpine.data("cart", () => ({
     name: [
-      "Lovers Pink Leather Custom Choker (Domi_nique)",
+      "Lovers Pink Leather Custom Choker (Princess_Electra)",
       "Lovers Water Based Lube Foil 10ml",
       // "King Cock Clear 18in Double Dildo",
     ],
